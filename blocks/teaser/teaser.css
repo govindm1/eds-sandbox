@@ -43,6 +43,7 @@
         padding: 1.5rem 1.5rem 1rem;
         width: 80vw;
         max-width: 1200px;
+        border:1px solid #000;
 
         .title {
             font-size: var(--heading-font-size-xl);
