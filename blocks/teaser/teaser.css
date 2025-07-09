@@ -107,6 +107,7 @@
         opacity: 1;
     }
 }
+/* /blocks/cards/teaser/teaser.css */
 .cardsWithTeaser{
     .cards > ul{
         grid-template-columns: repeat(4, 1fr);
