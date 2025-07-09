@@ -113,4 +113,18 @@
     .cards > ul{
         grid-template-columns: repeat(4, 1fr);
     }
+    .cards-card-body>div{
+        display:none;
+    }
+    .button-container{
+        position: absolute;
+    bottom: 0;
+    a.button:any-link, button{
+        border: none;
+    padding: 0;
+    background-color: inherit;
+    margin: 0;
+    border-radius: 24px;
+    }
+    }
 }
