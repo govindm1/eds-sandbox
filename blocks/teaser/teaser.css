@@ -116,7 +116,7 @@
         margin: 0 16px;
    
         > div {
-            visibility:hidden;
+          display: none;
         }
       }
    
@@ -147,6 +147,7 @@
           background-color: inherit;
           margin: 0;
           border-radius: 24px;
+          visibility:visible;
         }
       }
    
@@ -188,7 +189,7 @@
             .cards-card-body > div {
               transition-timing-function: ease-in;
               max-height: 400px;
-              visibility:visible;
+              display: block;
               font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
               font-weight: 400;
               line-height: 28px;
