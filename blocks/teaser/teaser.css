@@ -121,16 +121,11 @@
     .cards-card-body{
         position: relative;
     }
-    .block.teaser {
 
+    .block.teaser {
     .button-container{
         position: absolute;
         bottom: 0;
-
-    }
-
-    .button-container {
-        
     .button{
         border: none;
         padding: 0;
