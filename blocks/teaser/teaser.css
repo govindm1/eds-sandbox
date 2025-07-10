@@ -116,7 +116,7 @@
         margin: 0 16px;
    
         > div {
-          display: none;
+            visibility:hidden;
         }
       }
    
@@ -181,14 +181,14 @@
               }
 
               .button{                
-                display:none;
+                visibility:hidden;
               }
             }
    
             .cards-card-body > div {
               transition-timing-function: ease-in;
               max-height: 400px;
-              display: block;
+              visibility:visible;
               font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
               font-weight: 400;
               line-height: 28px;
