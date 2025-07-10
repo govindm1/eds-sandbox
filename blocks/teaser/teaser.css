@@ -128,13 +128,6 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        
-    .button{
-        border: none;
-        padding: 0;
-        background-color: inherit;
-        margin: 0;
-        border-radius: 24px;
 
         ::after{
             height: 16px;
@@ -167,6 +160,13 @@
     z-index: 1;
             }
         }
+        
+    .button{
+        border: none;
+        padding: 0;
+        background-color: inherit;
+        margin: 0;
+        border-radius: 24px;
     }
     }
 }   
