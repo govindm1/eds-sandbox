@@ -112,6 +112,33 @@
 .cards-with-teaser{
     .cards > ul{
         grid-template-columns: repeat(4, 1fr);
+        li {
+
+            cursor: pointer;
+
+            :hover {
+                
+            .button-container {
+                    ::after {
+                        right: 12px;
+                        bottom: 12px;
+                        width: 24px;
+                        height: 24px;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        pointer-events: none;
+                        overflow: hidden;
+                        transition: all .3s ease;
+                        position: absolute;
+                        left: auto;
+                        z-index: 1;
+                        background-color: transparent;
+                        content: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='%23fff'%3E%3Cpath%20d='M12%200C5.37258%200%200%205.37258%200%2012C0%2018.6274%205.37258%2024%2012%2024C18.6274%2024%2024%2018.6274%2024%2012C24%205.37258%2018.6274%200%2012%200ZM10%2018.4468L15.9274%2013H4V11H15.9274L10%205.55319L11.2941%204L20%2012L11.2941%2020L10%2018.4468Z'%3E%3C/path%3E%3C/svg%3E");
+                    }
+                }
+            
+        }
+    }
     }
 
     .cards-card-body>div{
@@ -131,6 +158,7 @@
 
         ::after{
             height: 16px;
+            width:16px;
             background-color: #fff;
             border-radius: 50%;
             pointer-events: none;
@@ -144,22 +172,6 @@
             inset: 5px 16px 16px auto;
         }
 
-        :hover{
-            ::after{
-                right: 12px;
-    bottom: 12px;
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    border-radius: 50%;
-    pointer-events: none;
-    overflow: hidden;
-    transition: all .3s ease;
-    position: absolute;
-    left: auto;
-    z-index: 1;
-            }
-        }
         
     .button{
         border: none;
