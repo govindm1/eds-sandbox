@@ -125,7 +125,8 @@
     .button-container{
         position: absolute;
         bottom: 0;
-    a.button{
+
+    .button{
         border: none;
         padding: 0;
         background-color: inherit;
