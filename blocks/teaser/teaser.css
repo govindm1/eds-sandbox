@@ -158,8 +158,7 @@
    
           &:hover {
             .button-container {
-  &::after {
-                
+  &::after {                
             inset: -16px 16px 16px auto;
                 width: 24px;
                 height: 24px;
