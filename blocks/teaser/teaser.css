@@ -190,8 +190,8 @@
             }
    
             .cards-card-body > div {
+              max-height: 352px;
               transition-timing-function: ease-in;
-              max-height: 400px;
               display: block;
               font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
               font-weight: 400;
