@@ -117,6 +117,10 @@
    
         > div {
           display: none;
+          max-height: 0;
+                transition-timing-function: ease-out;
+                overflow: hidden;
+                transition: max-height .7s;
         }
       }
    
