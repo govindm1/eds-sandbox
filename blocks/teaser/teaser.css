@@ -122,11 +122,10 @@
         position: relative;
     }
 
-    .block.teaser {
     .button-container{
         position: absolute;
         bottom: 0;
-        
+
     .button{
         border: none;
         padding: 0;
@@ -134,6 +133,6 @@
         margin: 0;
         border-radius: 24px;
     }
-    }
+    
 }   
 }
