@@ -135,7 +135,8 @@
         background-color: inherit;
         margin: 0;
         border-radius: 24px;
-        :after{
+
+        ::after{
             right: 16px;
             bottom: 16px;
             width: 16px;
@@ -153,8 +154,9 @@
             color: inherit !important;
             top: 5px;
         }
+
         :hover{
-            :after{
+            ::after{
                 right: 12px;
     bottom: 12px;
     width: 24px;
