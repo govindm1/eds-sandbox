@@ -92,7 +92,9 @@
         }
     }
 }
-
+.section.fullwidth .block.teaser {
+  width: 100%;
+}
 /** Animations
     Scope the @keyframes to the block (teaser) to avoid accidental conflicts outside the block
 
