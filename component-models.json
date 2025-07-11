@@ -133,7 +133,7 @@
         "id": "cards",
         "fields": [
             {
-                "component": "reference",
+                "component": "text",
                 "name": "style",
                 "value": "",
                 "label": "Style",
