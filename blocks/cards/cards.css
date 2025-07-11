@@ -31,3 +31,43 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.ds-brand-block-navigation-cards {
+  padding: 0 !important;
+  margin-top: -100px;
+}
+
+.ds-brand-block-navigation-cards .cards > ul {
+   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+   grid-gap: 0;
+}
+
+.ds-brand-block-navigation-cards .cards > ul > li {
+  background: #e1b77e;
+  color: #3e3f41;
+  border-radius: 0;
+  position: relative;
+}
+
+.ds-brand-block-navigation-cards .cards > ul > li:before{
+  background-image: linear-gradient(135deg, #1a8377, #05435e 100%);
+  content: "";
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.ds-brand-block-navigation-cards .cards > ul > li:hover{
+  color: #fff;
+}
+
+.ds-brand-block-navigation-cards .cards > ul > li:hover:before {
+  opacity: 1;
+}
+
+.ds-brand-block-navigation-cards .cards .cards-card-body{
+  z-index: 1;
+  position: relative;
+}
