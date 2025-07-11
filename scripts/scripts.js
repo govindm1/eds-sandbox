@@ -49,6 +49,17 @@ export function moveInstrumentation(from, to) {
 }
 
 /**
+ * @returns the site root when served from AEM
+ */
+export function getSiteRoot(path = window.location.pathname, level = 3) {
+  // This can be considered a workaround to load fragments without having a proper mapping in
+  // place. It is implemented for demo purposes in order to support creating multiple sites
+  // using this repository as a showcase, where the site root is unknown.
+  // Projects must sepcify the correct mappings in the paths.yaml.
+  return path.split('/', level).join('/');
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
