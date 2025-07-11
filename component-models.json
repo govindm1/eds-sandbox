@@ -216,10 +216,6 @@
                         {
                             "name": "Side-by-side",
                             "value": "side-by-side"
-                        },
-                        {
-                            "name":"Brand-Navigation",
-                            "value":"ds-brand-navigation-card"
                         }
                     ]
                 },
