@@ -201,6 +201,9 @@ main .section {
     max-width: 1200px;
     margin: auto;
   }
+  .section.fullwidth > div {
+    max-width:100%;
+  }
 }
 
 /* section metadata */
@@ -211,4 +214,7 @@ main .section.highlight {
 main .section.ds-brand-bg-dark{
   background-color: #054e5a;
   color: #fff;
+}
+main .section.fullwidth{
+  padding: 0;
 }
