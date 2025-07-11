@@ -108,7 +108,7 @@
     }
 }
 
-/* /blocks/cards/teaser/teaser.css */
+/** blocks/cards/teaser/teaser.css**/
 .cards-with-teaser { 
     .block.cards {   
       .cards-card-body {
