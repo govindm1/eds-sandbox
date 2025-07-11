@@ -134,10 +134,10 @@
         "fields": [
             {
                 "component": "text",
-                "valueType": "number",
-                "name": "num-of-cards",
+                "name": "style",
                 "value": "",
-                "label": "Number of cards in a row"
+                "label": "Style",
+                "valueType": "string"
             }
         ]
     },
