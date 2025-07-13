@@ -164,11 +164,18 @@
         "id": "carousel",
         "fields": [
             {
-                "component": "text",
-                "name": "style",
-                "value": "",
-                "label": "Style",
-                "valueType": "string"
+                "component": "reference",
+                "valueType": "string",
+                "name": "image",
+                "label": "Image",
+                "multi": false
+            },
+            {
+                "component": "reference",
+                "valueType": "string",
+                "name": "image",
+                "label": "Image",
+                "multi": false
             }
         ]
     },
