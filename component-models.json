@@ -164,17 +164,10 @@
         "id": "carousel",
         "fields": [
             {
-                "component": "reference",
-                "valueType": "string",
-                "name": "image",
-                "label": "Image",
-                "multi": false
-            },
-            {
-                "component": "richtext",
-                "name": "text",
+                "component": "text",
+                "name": "style",
                 "value": "",
-                "label": "Text",
+                "label": "Style",
                 "valueType": "string"
             }
         ]
