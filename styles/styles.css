@@ -58,6 +58,9 @@
     --heading-font-size-xs: 22px;
   }
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-size: var(--body-font-size-xs);
@@ -73,9 +76,9 @@ body.appear {
   display: block;
 }
 
-header {
+/* header {
   height: var(--nav-height);
-}
+} */
 
 h1, h2, h3,
 h4, h5, h6 {
@@ -201,7 +204,6 @@ main .section {
     max-width: 1200px;
     margin: auto;
   }
-  
   .section.fullwidth > div {
     max-width:100%;
   }
@@ -212,12 +214,10 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
-
 main .section.ds-brand-bg-dark{
   background-color: #054e5a;
   color: #fff;
 }
-
 main .section.fullwidth{
   padding: 0;
 }
