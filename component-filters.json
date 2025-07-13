@@ -41,6 +41,12 @@
       "teaser"
     ]
   },
+   {
+    "id": "carousel",
+    "components": [
+      "teaser"
+    ]
+  },
   {
     "id": "form",
     "components": [
