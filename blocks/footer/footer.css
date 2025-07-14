@@ -17,10 +17,16 @@ footer {
 
     .footer-main-inner{
         display: grid;
-        column-gap: 20px;
-        grid-template-areas: "footer-content footer-navigation";
-        grid-template-columns: 3fr 7fr;
-        justify-content: space-between;        
+        justify-content: space-between;
+        grid-template-areas:
+          "footer-content"
+          "footer-navigation";
+        grid-template-columns: 1fr;
+        @media (min-width: 1280px) {
+          column-gap: 20px;
+          grid-template-areas: "footer-content footer-navigation";
+          grid-template-columns: 3fr 7fr; 
+        }       
 
         @media (min-width: 1280px) {
           column-gap: 34px;
