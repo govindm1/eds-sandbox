@@ -19,41 +19,54 @@ export default async function decorate(block) {
 
     const classes = ['brand', 'sections', 'copyright', 'privacy-policy'];
     classes.forEach((c, i) => {
-        const section = footer.children[i];
-        // if (section) section.classList.add(`footer-${c}`);
-        if (section) {
-          section.classList.add(`footer-${c}`);
-          if (c === 'sections') {
-            const contentWrapper = section.querySelector('.default-content-wrapper');
-            if (contentWrapper) {
-              const children = Array.from(contentWrapper.children);
-              const newGroups = [];
-      
-              for (let i = 0; i < children.length; i++) {
-                const el = children[i];
-                if (el.tagName.toLowerCase() === 'h5') {
-                  const nextEl = children[i + 1];
-                  if (nextEl && ['ul', 'p', 'a'].includes(nextEl.tagName.toLowerCase())) {
-                    const group = document.createElement('div');
-                    group.classList.add('footer-link-group');
-                    group.appendChild(el.cloneNode(true));
-                    group.appendChild(nextEl.cloneNode(true));
-                    newGroups.push(group);
-                    i++;
-                  } else {
-                    const group = document.createElement('div');
-                    group.classList.add('footer-link-group');
-                    group.appendChild(el.cloneNode(true));
-                    newGroups.push(group);
-                  }
-                }
+    const section = footer.children[i];
+    if (section) {
+      section.classList.add(`footer-${c}`);
+
+      if (c === 'sections') {
+        const contentWrapper = section.querySelector('.default-content-wrapper');
+        if (contentWrapper) {
+          const children = Array.from(contentWrapper.children);
+          const newGroups = [];
+
+          for (let i = 0; i < children.length; i++) {
+            const el = children[i];
+            if (el.tagName.toLowerCase() === 'h5') {
+              const nextEl = children[i + 1];
+              if (nextEl && ['ul', 'p', 'a'].includes(nextEl.tagName.toLowerCase())) {
+                const group = document.createElement('div');
+                group.classList.add('footer-link-group');
+                group.appendChild(el.cloneNode(true));
+                group.appendChild(nextEl.cloneNode(true));
+                newGroups.push(group);
+                i++; 
+              } else {
+                const group = document.createElement('div');
+                group.classList.add('footer-link-group');
+                group.appendChild(el.cloneNode(true));
+                newGroups.push(group);
               }
-      
-              contentWrapper.textContent = '';
-              newGroups.forEach((group) => contentWrapper.appendChild(group));
             }
           }
+
+          contentWrapper.textContent = '';
+          newGroups.forEach((group) => contentWrapper.appendChild(group));
         }
-    });
+      }
+    }
+  });
+
+  const legalWrapper = document.createElement('div');
+  legalWrapper.classList.add('footer-legal');
+
+  const copyright = footer.querySelector('.footer-copyright');
+  const privacy = footer.querySelector('.footer-privacy-policy');
+
+  if (copyright) legalWrapper.appendChild(copyright);
+  if (privacy) legalWrapper.appendChild(privacy);
+
+  if (legalWrapper.children.length > 0) {
+    footer.appendChild(legalWrapper);
+  }
     block.append(footer);
 }
