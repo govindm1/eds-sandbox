@@ -2,6 +2,9 @@ footer {
   padding: 2rem;
   background-color: var(--light-color);
   font-size: var(--body-font-size-s);
+  background-image: linear-gradient(#fff, #e6edee 50px, #054e5a 0, #054e5a);
+  padding-bottom: 48px;
+  color: #fff;
 }
 
 footer .footer {
