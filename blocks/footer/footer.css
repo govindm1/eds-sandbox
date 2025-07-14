@@ -42,7 +42,7 @@ footer {
           max-width: 85%;
           }
 
-          @media (min-width: 768px) {
+          @media (min-width: 1024px) {
           margin-left: 0;
           max-width: 100%;
           }
