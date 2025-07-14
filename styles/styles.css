@@ -207,6 +207,7 @@ main .section {
   }
   .section.fullwidth > div {
     max-width:100%;
+    padding:0;
   }
 }
 
