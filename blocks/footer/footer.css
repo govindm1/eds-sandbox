@@ -1,7 +1,10 @@
 footer {
 
   .footer.block{
-    
+    .footer-main-inner, footer-legal-inner{
+      max-width: 1200px;
+      margin: auto;
+    }
    .footer-main{
     padding: 2rem;
     background-color: var(--light-color);
@@ -118,13 +121,24 @@ footer {
         }
       }
     }
+
+    .footer-legal{
+      background-color: #04424d;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      padding-inline: 30px;
+
+      .footer-legal-inner{
+        column-gap: 24px;
+        grid-template-areas: "text-copy text-nav";
+        row-gap: 24px;
+        display: grid;
+        justify-content: space-between;
+      }
+    }
   }
 }
 
-footer .footer {
-  max-width: 1200px;
-  margin: auto;
-}
 
 footer .footer p {
   margin: 0;
