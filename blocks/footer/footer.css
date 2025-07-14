@@ -5,6 +5,68 @@ footer {
   background-image: linear-gradient(#fff, #e6edee 50px, #054e5a 0, #054e5a);
   padding-bottom: 48px;
   color: #fff;
+
+  .footer.block{
+    
+   > div{
+
+    @media (min-width: 1280px) {
+      column-gap: 34px;
+      grid-template-columns: minmax(auto, 32%) minmax(auto, 63%);
+    }
+        display: grid;
+        column-gap: 20px;
+        grid-template-areas: "footer-content footer-navigation";
+        grid-template-columns: 3fr 7fr;
+        justify-content: space-between;
+
+        .section.footer-brand{
+          grid-area: footer-content;
+          margin-bottom: 40px;
+
+          .default-content-wrapper{
+            background-image: url('https://www.atlascopcogroup.com/content/dam/brands/atlas-copco-group/utilities/Atlas-Copco-Group-design-overlay.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 24px 24px 24px 0;
+            padding: 3pc 2pc 24px;
+            row-gap: 24px;
+            background-color: #04424d;
+            background-position: 50%;
+            display: grid;
+            position: relative;
+
+            .button-container{
+
+              .button{
+                background: none;
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+
+                &::before{
+                  left: 0;
+                  margin-right: 10px;
+                  mask-size: 24px;
+                  aspect-ratio: 1;
+                  background-color: currentColor;
+                  content: "";
+                  display: inline-block;
+                  height: 24px;
+                  mask-image: url(data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.8361 12.7304C14.0351 12.5558 14.0355 12.2126 13.7813 12.0219L12.0372 10.7138C11.8676 10.5866 11.6362 10.5802 11.4598 10.6978L10.3063 11.4668C9.71134 11.8635 8.91916 11.785 8.41356 11.2794L4.72421 7.59008C4.21861 7.08448 4.14017 6.2923 4.53679 5.69737L5.30584 4.5438C5.42343 4.36742 5.41701 4.13605 5.28981 11.96645L3.98176 2.22239C3.79106 1.96812 3.44785 1.9685 3.27323 2.16753C2.35293 3.21653 1.79935 4.23306 1.93578 5.48888C2.07588 6.77852 2.95511 8.44736 5.25569 10.7479C7.55628 13.0485 9.22512 13.9278 10.5148 14.0679C11.7706 14.2043 12.7871 13.6507 13.8361 12.7304ZM14.3813 11.2219C15.1007 11.7614 15.2115 12.8541 14.4956 13.4821C13.3652 14.4739 12.0753 15.2433 10.4068 15.062C8.77209 14.8844 6.89879 13.8053 4.54859 11.4551C2.19839 9.10486 1.11922 7.23155 0.941628 5.59688C0.760364 3.92838 1.52979 2.63845 2.52152 1.50804C3.14956 0.792166 4.2422 0.902972 4.78176 1.62239L6.08981 3.36645C6.4714 3.87523 6.49066 4.56934 6.13789 5.0985L5.36884 6.25207C5.23664 6.45038 5.26278 6.71444 5.43132 6.88297L9.12067 10.5723C9.2892 10.7409 9.55326 10.767 9.75157 10.6348L10.9051 9.86575C11.4343 9.51298 12.1284 9.53224 12.6372 9.91383L14.3813 11.2219Z" fill="%231072B9"/></svg>);
+                  mask-position: center;
+                  mask-repeat: no-repeat;
+                  position: relative;
+                  top: -3px;
+                  vertical-align: middle;
+                  width: 24px;
+                }
+              }
+            }
+          }
+        }
+    }
+  }
 }
 
 footer .footer {
@@ -18,11 +80,4 @@ footer .footer p {
 footer img {
   max-width: 164px;
   height: auto;
-}
-.footer >div{
-  display: grid;
-  -moz-column-gap: 34px;
-  -webkit-column-gap: 34px;
-  column-gap: 34px;
-  grid-template-columns: minmax(auto, 32%) minmax(auto, 63%);
 }
