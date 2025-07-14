@@ -19,7 +19,7 @@ export default async function decorate(block) {
 
     const classes = ['brand', 'sections', 'copyright', 'privacy-policy'];
     classes.forEach((c, i) => {
-      const section = footer.children[i];
+      const section = fragment.children[i];
       if (section) {
         section.classList.add(`footer-${c}`);
   
@@ -39,7 +39,7 @@ export default async function decorate(block) {
                   group.appendChild(el.cloneNode(true));
                   group.appendChild(nextEl.cloneNode(true));
                   newGroups.push(group);
-                  i++; 
+                  i++;
                 } else {
                   const group = document.createElement('div');
                   group.classList.add('footer-link-group');
@@ -53,20 +53,13 @@ export default async function decorate(block) {
             newGroups.forEach((group) => contentWrapper.appendChild(group));
           }
         }
+        if (c === 'brand' || c === 'sections') {
+          footerMain.appendChild(section);
+        } else if (c === 'copyright' || c === 'privacy-policy') {
+          footerLegal.appendChild(section);
+        }
       }
     });
-  
-    const legalWrapper = document.createElement('div');
-    legalWrapper.classList.add('footer-legal');
-  
-    const copyright = footer.querySelector('.footer-copyright');
-    const privacy = footer.querySelector('.footer-privacy-policy');
-  
-    if (copyright) legalWrapper.appendChild(copyright);
-    if (privacy) legalWrapper.appendChild(privacy);
-  
-    if (legalWrapper.children.length > 0) {
-      footer.appendChild(legalWrapper);
-    }
-    block.append(footer);
+    block.appendChild(footerMain);
+    block.appendChild(footerLegal);
 }
