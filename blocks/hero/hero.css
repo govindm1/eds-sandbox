@@ -1,5 +1,6 @@
 main .hero-container > div {
   max-width: unset;
+  padding: 0;
 }
   
 main .hero-container {
