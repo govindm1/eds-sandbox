@@ -2,8 +2,6 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
-  const cols = [...block.children];
-  block.classList.add(`cards-${cols.length}-cols`);
   /* change to ul, li */
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {
