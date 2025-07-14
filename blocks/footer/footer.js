@@ -17,10 +17,22 @@ export default async function decorate(block) {
     const footer = document.createElement('div');
     while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
-    const classes = ['brand', 'sections', 'tools'];
+    const classes = ['brand', 'sections', 'copyright', 'privacy-policy'];
     classes.forEach((c, i) => {
         const section = footer.children[i];
-        if (section) section.classList.add(`footer-${c}`);
+        // if (section) section.classList.add(`footer-${c}`);
+        if (section) {
+          section.classList.add(`footer-${c}`);
+          const h5 = section.querySelector('h5');
+          if (h5 && h5.nextElementSibling) {
+            const sibling = h5.nextElementSibling;
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('footer-subgroup');    
+            wrapper.appendChild(h5);
+            wrapper.appendChild(sibling);    
+            section.insertBefore(wrapper, sibling.nextElementSibling);
+          }
+        }
     });
     block.append(footer);
 }
