@@ -133,16 +133,27 @@ footer {
 
     .footer-legal{
       background-color: #04424d;
-      padding-bottom: 20px;
-      padding-top: 20px;
+      padding-bottom: 12px;
+      padding-top: 12px;
       padding-inline: 30px;
 
+      @media (min-width: 1024px){
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+      }
+      
       .footer-legal-inner{
-        column-gap: 24px;
-        grid-template-areas: "text-copy text-nav";
-        row-gap: 24px;
+        row-gap: 1pc;
         display: grid;
         justify-content: space-between;
+
+        @media (min-width: 1024px){
+          column-gap: 24px;
+          row-gap: 24px;
+          grid-template-areas: "text-copy text-nav";
+
+        }
 
         .footer-copyright{
           color: #b4cace;
