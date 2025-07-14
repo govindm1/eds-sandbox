@@ -22,7 +22,7 @@ footer {
           "footer-content"
           "footer-navigation";
         grid-template-columns: 1fr;
-        @media (min-width: 1280px) {
+        @media (min-width: 1024px) {
           column-gap: 20px;
           grid-template-areas: "footer-content footer-navigation";
           grid-template-columns: 3fr 7fr; 
@@ -36,6 +36,16 @@ footer {
         .section.footer-brand{
           grid-area: footer-content;
           margin-bottom: 40px;
+
+          @media (min-width: 768px) {
+          margin-left: 24px;
+          max-width: 85%;
+          }
+
+          @media (min-width: 768px) {
+          margin-left: 0;
+          max-width: 100%;
+          }
 
           .default-content-wrapper{
             background-image: url('https://www.atlascopcogroup.com/content/dam/brands/atlas-copco-group/utilities/Atlas-Copco-Group-design-overlay.png');
@@ -89,7 +99,10 @@ footer {
         }
 
         .section.footer-sections{
+
+          @media (min-width: 1024px) {
           padding-top: 75pt;
+          }
 
           .default-content-wrapper{
             gap: 3pc;
