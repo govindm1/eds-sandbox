@@ -76,10 +76,40 @@ footer {
             grid-template-columns: repeat(2, 1fr);
             display: grid;
 
-            .footer-link-group{
+            @media (min-width: 1280px){
+              column-gap: 3pc;
+              grid-template-columns: repeat(2, minmax(auto, 220px)) 1fr;
+            }
+
+            .footer-link-group{             
 
               h5{
                 margin-top: 0px;
+                margin-bottom: 24px;
+                font-size: 20px;
+                color: #b4cace;
+                font-weight: 600;
+                line-height: 1.4;
+                margin-bottom: 24px;
+              }
+
+              ul{
+                font-size: 18px;
+                row-gap: 9pt;
+                display: grid;
+                line-height: 1.8;
+                margin-left: 0;
+                list-style-type: none;
+                padding-left: 0;
+                margin: 0;
+              }
+            }
+            
+            .footer-link-group:nth-child(3){
+              grid-column: span 2;
+
+              @media (min-width: 1280px){
+                grid-column: auto;
               }
             }
           }
