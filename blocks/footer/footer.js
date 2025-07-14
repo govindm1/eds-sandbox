@@ -56,29 +56,30 @@ export default async function decorate(block) {
     }
   });
 
-  const legalWrapper = document.createElement('div');
-  legalWrapper.classList.add('footer-legal');
-
   const mainWrapper = document.createElement('div');
   mainWrapper.classList.add('footer-main');
 
-  const copyright = footer.querySelector('.footer-copyright');
-  const privacy = footer.querySelector('.footer-privacy-policy');
+  const legalWrapper = document.createElement('div');
+  legalWrapper.classList.add('footer-legal');
 
   const brand = footer.querySelector('.footer-brand');
   const linkSection = footer.querySelector('.footer-sections');
 
-  if (copyright) legalWrapper.appendChild(copyright);
-  if (privacy) legalWrapper.appendChild(privacy);
+  const copyright = footer.querySelector('.footer-copyright');
+  const privacy = footer.querySelector('.footer-privacy-policy');
 
   if (brand) mainWrapper.appendChild(brand);
   if (linkSection) mainWrapper.appendChild(linkSection);
 
-  if (legalWrapper.children.length > 0) {
-    footer.appendChild(legalWrapper);
-  }
+  if (copyright) legalWrapper.appendChild(copyright);
+  if (privacy) legalWrapper.appendChild(privacy);
+  
   if (mainWrapper.children.length > 0) {
     footer.appendChild(mainWrapper);
+  }
+
+  if (legalWrapper.children.length > 0) {
+    footer.appendChild(legalWrapper);
   }
     block.append(footer);
 }
