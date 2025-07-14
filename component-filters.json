@@ -42,12 +42,6 @@
     ]
   },
   {
-    "id": "carousel",
-    "components": [
-      "card"
-    ]
-  },
-  {
     "id": "form",
     "components": [
       "checkbox",
