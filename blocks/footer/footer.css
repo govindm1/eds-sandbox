@@ -5,6 +5,8 @@ footer {
   background-image: linear-gradient(#fff, #e6edee 50px, #054e5a 0, #054e5a);
   padding-bottom: 48px;
   color: #fff;
+  margin-top: 20px;
+  padding-top: 0;
 
   .footer.block{
     
@@ -61,6 +63,23 @@ footer {
                   vertical-align: middle;
                   width: 24px;
                 }
+              }
+            }
+          }
+        }
+
+        .section.footer-sections{
+          padding-top: 75pt;
+
+          .default-content-wrapper{
+            gap: 3pc;
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+
+            .footer-link-group{
+
+              h5{
+                margin-top: 0px;
               }
             }
           }
