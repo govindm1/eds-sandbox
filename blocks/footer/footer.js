@@ -62,24 +62,33 @@ export default async function decorate(block) {
   const legalWrapper = document.createElement('div');
   legalWrapper.classList.add('footer-legal');
 
+  const mainInner = document.createElement('div');
+  mainInner.classList.add('footer-main-inner');
+
+  const legalInner = document.createElement('div');
+  legalInner.classList.add('footer-legal-inner');
+
+ 
   const brand = footer.querySelector('.footer-brand');
   const linkSection = footer.querySelector('.footer-sections');
-
   const copyright = footer.querySelector('.footer-copyright');
   const privacy = footer.querySelector('.footer-privacy-policy');
 
-  if (brand) mainWrapper.appendChild(brand);
-  if (linkSection) mainWrapper.appendChild(linkSection);
+  if (brand) mainInner.appendChild(brand);
+  if (linkSection) mainInner.appendChild(linkSection);
 
-  if (copyright) legalWrapper.appendChild(copyright);
-  if (privacy) legalWrapper.appendChild(privacy);
-  
-  if (mainWrapper.children.length > 0) {
+  if (copyright) legalInner.appendChild(copyright);
+  if (privacy) legalInner.appendChild(privacy);
+
+  if (mainInner.children.length > 0) {
+    mainWrapper.appendChild(mainInner);
     footer.appendChild(mainWrapper);
   }
 
-  if (legalWrapper.children.length > 0) {
+  if (legalInner.children.length > 0) {
+    legalWrapper.appendChild(legalInner);
     footer.appendChild(legalWrapper);
   }
-    block.append(footer);
+
+  block.append(footer);
 }
