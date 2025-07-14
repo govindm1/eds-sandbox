@@ -9,16 +9,16 @@ footer {
   .footer.block{
     
    > div{
-
-    @media (min-width: 1280px) {
-      column-gap: 34px;
-      grid-template-columns: minmax(auto, 32%) minmax(auto, 63%);
-    }
         display: grid;
         column-gap: 20px;
         grid-template-areas: "footer-content footer-navigation";
         grid-template-columns: 3fr 7fr;
-        justify-content: space-between;
+        justify-content: space-between;        
+
+        @media (min-width: 1280px) {
+          column-gap: 34px;
+          grid-template-columns: minmax(auto, 32%) minmax(auto, 63%);
+        }
 
         .section.footer-brand{
           grid-area: footer-content;
