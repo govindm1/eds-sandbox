@@ -28,7 +28,7 @@ export default async function decorate(block) {
             if (contentWrapper) {
               const children = Array.from(contentWrapper.children);
               const newGroups = [];
-    
+      
               for (let i = 0; i < children.length; i++) {
                 const el = children[i];
                 if (el.tagName.toLowerCase() === 'h5') {
@@ -39,9 +39,8 @@ export default async function decorate(block) {
                     group.appendChild(el.cloneNode(true));
                     group.appendChild(nextEl.cloneNode(true));
                     newGroups.push(group);
-                    i++; // skip nextEl in next iteration
+                    i++;
                   } else {
-                    // just append h5 alone if no valid sibling
                     const group = document.createElement('div');
                     group.classList.add('footer-link-group');
                     group.appendChild(el.cloneNode(true));
@@ -49,8 +48,7 @@ export default async function decorate(block) {
                   }
                 }
               }
-    
-              // Clear old content and add new groups
+      
               contentWrapper.textContent = '';
               newGroups.forEach((group) => contentWrapper.appendChild(group));
             }
