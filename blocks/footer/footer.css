@@ -19,3 +19,10 @@ footer img {
   max-width: 164px;
   height: auto;
 }
+.footer >div{
+  display: grid;
+  -moz-column-gap: 34px;
+  -webkit-column-gap: 34px;
+  column-gap: 34px;
+  grid-template-columns: minmax(auto, 32%) minmax(auto, 63%);
+}
