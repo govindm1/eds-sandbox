@@ -10,7 +10,7 @@ footer {
 
   .footer.block{
     
-   > div{
+   .footer-main{
         display: grid;
         column-gap: 20px;
         grid-template-areas: "footer-content footer-navigation";
