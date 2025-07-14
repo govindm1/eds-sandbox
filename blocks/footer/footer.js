@@ -23,14 +23,37 @@ export default async function decorate(block) {
         // if (section) section.classList.add(`footer-${c}`);
         if (section) {
           section.classList.add(`footer-${c}`);
-          const h5 = section.querySelector('h5');
-          if (h5 && h5.nextElementSibling) {
-            const sibling = h5.nextElementSibling;
-            const wrapper = document.createElement('div');
-            wrapper.classList.add('footer-subgroup');    
-            wrapper.appendChild(h5);
-            wrapper.appendChild(sibling);    
-            section.insertBefore(wrapper, sibling.nextElementSibling);
+          if (c === 'sections') {
+            const contentWrapper = section.querySelector('.default-content-wrapper');
+            if (contentWrapper) {
+              const children = Array.from(contentWrapper.children);
+              const newGroups = [];
+    
+              for (let i = 0; i < children.length; i++) {
+                const el = children[i];
+                if (el.tagName.toLowerCase() === 'h5') {
+                  const nextEl = children[i + 1];
+                  if (nextEl && ['ul', 'p', 'a'].includes(nextEl.tagName.toLowerCase())) {
+                    const group = document.createElement('div');
+                    group.classList.add('footer-link-group');
+                    group.appendChild(el.cloneNode(true));
+                    group.appendChild(nextEl.cloneNode(true));
+                    newGroups.push(group);
+                    i++; // skip nextEl in next iteration
+                  } else {
+                    // just append h5 alone if no valid sibling
+                    const group = document.createElement('div');
+                    group.classList.add('footer-link-group');
+                    group.appendChild(el.cloneNode(true));
+                    newGroups.push(group);
+                  }
+                }
+              }
+    
+              // Clear old content and add new groups
+              contentWrapper.textContent = '';
+              newGroups.forEach((group) => contentWrapper.appendChild(group));
+            }
           }
         }
     });
