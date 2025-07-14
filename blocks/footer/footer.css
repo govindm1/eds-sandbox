@@ -70,6 +70,15 @@ footer {
                 }
               }
             }
+
+            &::before{
+              background-color: #e1b77e;
+              content: "";
+              position: absolute;
+              height: 24px;
+              inset: auto auto -24px -24px;
+              width: 24px;
+            }
           }
         }
 
@@ -143,11 +152,22 @@ footer {
 
         .footer-privacy-policy{
 
+          .default-content-wrapper{
+
+            p{
+              flex-wrap: wrap;
+              row-gap: 9pt;
+              display: flex;
+              column-gap: 20px;
+              justify-content: flex-end;
+
           a{
             color: #fff;
             font-size: 18px;
             line-height: 1.8;
           }
+        }
+        }
         }
       }
     }
