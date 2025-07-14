@@ -20,7 +20,7 @@ export default async function decorate(block) {
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = footer.children[i];
-    iif (section) {
+    if (section) {
       section.classList.add(`footer-${c}`);
 
       const h5 = section.querySelector('h5');
