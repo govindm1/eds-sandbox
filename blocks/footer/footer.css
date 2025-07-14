@@ -15,3 +15,7 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+footer img {
+  max-width: 164px;
+  height: auto;
+}
