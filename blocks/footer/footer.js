@@ -14,7 +14,11 @@ export default async function decorate(block) {
 
     // decorate footer DOM
     block.textContent = '';
-    const footer = document.createElement('div');
+    const footerMain = document.createElement('div');
+    footerMain.classList.add('footer-main');
+  
+    const footerLegal = document.createElement('div');
+    footerLegal.classList.add('footer-legal');
     while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
     const classes = ['brand', 'sections', 'copyright', 'privacy-policy'];
