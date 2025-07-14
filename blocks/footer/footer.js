@@ -20,7 +20,24 @@ export default async function decorate(block) {
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = footer.children[i];
-    if (section) section.classList.add(`footer-${c}`);
+    iif (section) {
+      section.classList.add(`footer-${c}`);
+
+      const h5 = section.querySelector('h5');
+      if (h5) {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('footer-subsection');
+
+        let sibling = h5;
+        while (sibling) {
+          const next = sibling.nextElementSibling;
+          wrapper.appendChild(sibling);
+          sibling = next;
+        }
+
+        section.appendChild(wrapper);
+      }
+    }
   });
   block.append(footer);
 }
