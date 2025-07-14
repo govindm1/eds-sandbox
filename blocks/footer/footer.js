@@ -14,59 +14,59 @@ export default async function decorate(block) {
 
     // decorate footer DOM
     block.textContent = '';
-    const footer = document.createElement('div');
+
+    const footerMain = document.createElement('div');
+    footerMain.classList.add('footer-main');
+
+    const footerLegal = document.createElement('div');
+    footerLegal.classList.add('footer-legal');
+
     while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
     const classes = ['brand', 'sections', 'copyright', 'privacy-policy'];
     classes.forEach((c, i) => {
-    const section = footer.children[i];
-    if (section) {
-      section.classList.add(`footer-${c}`);
+      const section = fragment.children[i];
+      if (section) {
+        section.classList.add(`footer-${c}`);
+  
+        // if (c === 'sections') {
+        //   const contentWrapper = section.querySelector('.default-content-wrapper');
+        //   if (contentWrapper) {
+        //     const children = Array.from(contentWrapper.children);
+        //     const newGroups = [];
+  
+        //     for (let i = 0; i < children.length; i++) {
+        //       const el = children[i];
+        //       if (el.tagName.toLowerCase() === 'h5') {
+        //         const nextEl = children[i + 1];
+        //         if (nextEl && ['ul', 'p', 'a'].includes(nextEl.tagName.toLowerCase())) {
+        //           const group = document.createElement('div');
+        //           group.classList.add('footer-link-group');
+        //           group.appendChild(el.cloneNode(true));
+        //           group.appendChild(nextEl.cloneNode(true));
+        //           newGroups.push(group);
+        //           i++;
+        //         } else {
+        //           const group = document.createElement('div');
+        //           group.classList.add('footer-link-group');
+        //           group.appendChild(el.cloneNode(true));
+        //           newGroups.push(group);
+        //         }
+        //       }
+        //     }
+  
+        //     contentWrapper.textContent = '';
 
-      if (c === 'sections') {
-        const contentWrapper = section.querySelector('.default-content-wrapper');
-        if (contentWrapper) {
-          const children = Array.from(contentWrapper.children);
-          const newGroups = [];
-
-          for (let i = 0; i < children.length; i++) {
-            const el = children[i];
-            if (el.tagName.toLowerCase() === 'h5') {
-              const nextEl = children[i + 1];
-              if (nextEl && ['ul', 'p', 'a'].includes(nextEl.tagName.toLowerCase())) {
-                const group = document.createElement('div');
-                group.classList.add('footer-link-group');
-                group.appendChild(el.cloneNode(true));
-                group.appendChild(nextEl.cloneNode(true));
-                newGroups.push(group);
-                i++; 
-              } else {
-                const group = document.createElement('div');
-                group.classList.add('footer-link-group');
-                group.appendChild(el.cloneNode(true));
-                newGroups.push(group);
-              }
-            }
-          }
-
-          contentWrapper.textContent = '';
-          newGroups.forEach((group) => contentWrapper.appendChild(group));
+        //     newGroups.forEach((group) => contentWrapper.appendChild(group));
+        //   }
+        // }
+        if (c === 'brand' || c === 'sections') {
+          footerMain.appendChild(section);
+        } else if (c === 'copyright' || c === 'privacy-policy') {
+          footerLegal.appendChild(section);
         }
       }
-    }
-  });
-
-  const legalWrapper = document.createElement('div');
-  legalWrapper.classList.add('footer-legal');
-
-  const copyright = footer.querySelector('.footer-copyright');
-  const privacy = footer.querySelector('.footer-privacy-policy');
-
-  if (copyright) legalWrapper.appendChild(copyright);
-  if (privacy) legalWrapper.appendChild(privacy);
-
-  if (legalWrapper.children.length > 0) {
-    footer.appendChild(legalWrapper);
-  }
-    block.append(footer);
+    });
+    block.appendChild(footerMain);
+    block.appendChild(footerLegal);
 }
