@@ -203,6 +203,7 @@ main .section {
   .section > div {
     max-width: 1500px;
     margin: auto;
+    padding-inline:30px;
   }
   .section.fullwidth > div {
     max-width:100%;
