@@ -71,3 +71,6 @@
   z-index: 1;
   position: relative;
 }
+.section.ds-brand-bg-dark .cards .cards-card-body {
+  color: #fff;
+}
