@@ -1,7 +1,7 @@
 footer {
 
   .footer.block{
-    .footer-main-inner, footer-legal-inner{
+    .footer-main-inner, .footer-legal-inner{
       max-width: 1200px;
       margin: auto;
     }
@@ -134,6 +134,21 @@ footer {
         row-gap: 24px;
         display: grid;
         justify-content: space-between;
+
+        .footer-copyright{
+          color: #b4cace;
+          line-height: 1.8;
+          font-size: 18px;
+        }
+
+        .footer-privacy-policy{
+
+          a{
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.8;
+          }
+        }
       }
     }
   }
