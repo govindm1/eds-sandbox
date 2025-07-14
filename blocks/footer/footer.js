@@ -65,8 +65,8 @@ export default async function decorate(block) {
   const copyright = footer.querySelector('.footer-copyright');
   const privacy = footer.querySelector('.footer-privacy-policy');
 
-  const brand = footer.querySelector('.footer-copyright');
-  const linkSection = footer.querySelector('.footer-privacy-policy');
+  const brand = footer.querySelector('.footer-brand');
+  const linkSection = footer.querySelector('.footer-sections');
 
   if (copyright) legalWrapper.appendChild(copyright);
   if (privacy) legalWrapper.appendChild(privacy);
