@@ -68,6 +68,17 @@
   margin: 0;
   padding: 24px;
 }
+
+.ds-brand-block-navigation-cards .cards > ul > li:not(:last-child) .cards-card-body::after{
+  background-image: linear-gradient(135deg, #1a8377, #05435e 100%);
+  content: "";
+  height: 1px;
+  inset: auto 0 0 0;
+  position: absolute;
+  height: auto;
+  inset: 0 0 0 auto;
+  width: 1px;
+}
 .ds-brand-block-navigation-cards .cards .cards-card-body:empty {
   display: none;
 }
