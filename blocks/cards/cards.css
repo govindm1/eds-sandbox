@@ -46,6 +46,7 @@
   color: #3e3f41;
   border-radius: 0;
   position: relative;
+  font-family: Noto Sans, Arial, Helvetica, sans-serif;
 }
 
 .ds-brand-block-navigation-cards .cards > ul > li::before{
@@ -70,6 +71,15 @@
 .ds-brand-block-navigation-cards .cards .cards-card-body:empty {
   display: none;
 }
+.ds-brand-block-navigation-cards .cards .cards-card-body >div{
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: grid;
+    float: none;
+    grid-area: content-area;
+    row-gap: 24px
+}
 .ds-brand-block-navigation-cards .cards .cards-card-body >div >p:first-child{
   color: #04424d;
   display: inline-block;
@@ -87,6 +97,7 @@
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
   margin: 0;
+  font-family: Noto Serif, Arial, Helvetica, sans-serif;
 }
 .ds-brand-block-navigation-cards .cards .cards-card-body >div >p:last-child{
   font-size: 14px;
@@ -107,6 +118,9 @@
     .ds-brand-block-navigation-cards .cards .cards-card-body >div >p:last-child{
       font-size:1pc;
       line-height: 1.5;
+    }
+    .ds-brand-block-navigation-cards .cards .cards-card-body >div{
+        row-gap:20px
     }
 }
 
