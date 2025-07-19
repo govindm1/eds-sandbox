@@ -20,6 +20,29 @@ main .hero-container {
   color: white;
 }
 
+.hero h1 {
+  font-family:Noto Serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.33;
+}
+.hero p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 56px;
+    letter-spacing: -1px;
+    line-height: 1.14;
+  }
+  .hero p {
+      font-size:24px;
+      line-height: 1.8;
+  }
+}
+
 .hero picture {
   position: absolute;
   z-index: -1;
