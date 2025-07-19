@@ -14,10 +14,9 @@ main .hero-container {
 }
 
 .hero h1,.hero p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   color: white;
+  margin: 0;
 }
 
 .hero h1 {
@@ -36,10 +35,12 @@ main .hero-container {
     font-size: 56px;
     letter-spacing: -1px;
     line-height: 1.14;
+    width: 58%;
   }
   .hero p {
       font-size:24px;
       line-height: 1.8;
+      width: 58%;
   }
 }
 
@@ -64,4 +65,9 @@ main .hero-container {
   mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .3)), to(#000));
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, .3), #000);
   opacity: 1;
+}
+.hero >div:nth-child(2) >div {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-inline: 30px;
 }
