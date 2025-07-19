@@ -69,7 +69,7 @@
   padding: 24px;
 }
 
-.ds-brand-block-navigation-cards .cards > ul > li:not(:last-child) .cards-card-body::after{
+.ds-brand-block-navigation-cards .cards > ul > li:not(:last-child)::after{
   background-image: linear-gradient(135deg, #1a8377, #05435e 100%);
   content: "";
   height: 1px;
