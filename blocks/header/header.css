@@ -218,6 +218,9 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 @media (width >= 900px) {
+  header .nav-brand >div {
+    padding: 0;
+  }
   header nav .nav-sections {
     display: block;
     visibility: visible;
