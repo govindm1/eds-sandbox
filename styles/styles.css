@@ -232,3 +232,16 @@ main .section.ds-brand-bg-dark{
 main .section.fullwidth{
   padding: 0;
 }
+main .section.video-section {
+  display: flex;
+  max-width: 1500px;
+  margin: auto;
+  padding-inline: 30px;
+  align-items: center;
+  flex-direction: unset;
+  gap: 32px;
+}
+main .section.video-section >div {
+  flex: 1;
+  padding: 0;
+}
