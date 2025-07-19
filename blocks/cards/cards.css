@@ -57,11 +57,6 @@
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
-
-.ds-brand-block-navigation-cards .cards > ul > li:hover{
-  color: #fff;
-}
-
 .ds-brand-block-navigation-cards .cards > ul > li:hover::before {
   opacity: 1;
 }
@@ -69,7 +64,55 @@
 .ds-brand-block-navigation-cards .cards .cards-card-body{
   z-index: 1;
   position: relative;
+  margin: 0;
+  padding: 24px;
 }
+.ds-brand-block-navigation-cards .cards .cards-card-body:empty {
+  display: none;
+}
+.ds-brand-block-navigation-cards .cards .cards-card-body >div >p:first-child{
+  color: #04424d;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .0625em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.ds-brand-block-navigation-cards .cards .cards-card-body >div h2{
+  color: #04424d;
+  font-size: 22px;
+  line-height: 1.5;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  margin: 0;
+}
+.ds-brand-block-navigation-cards .cards .cards-card-body >div >p:last-child{
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+  color: #3e3f41;
+}
+
+@media (min-width: 1024px) {
+    .ds-brand-block-navigation-cards .cards .cards-card-body >div >p:first-child{
+      font-size:1pc;
+      line-height: 1.5
+    }
+    .ds-brand-block-navigation-cards .cards .cards-card-body >div h2 {
+      font-size:2pc
+    }
+    .ds-brand-block-navigation-cards .cards .cards-card-body >div >p:last-child{
+      font-size:1pc;
+      line-height: 1.5;
+    }
+}
+
 .section.ds-brand-bg-dark .cards .cards-card-body {
   color: #000;
+}
+.ds-brand-block-navigation-cards .cards > ul > li:hover{
+  color: #fff !important;
 }
