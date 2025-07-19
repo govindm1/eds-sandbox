@@ -246,18 +246,23 @@
         "id": "video",
         "fields": [
             {
+                "component": "text",
+                "name": "url",
+                "label": "Video Link",
+                "valueType": "string"
+            },
+            {
+                "component": "boolean",
+                "name": "autoplay",
+                "label": "Autoplay",
+                "valueType": "boolean"
+            },
+            {
                 "component": "reference",
                 "valueType": "string",
                 "name": "fileReference",
-                "label": "Video",
+                "label": "Background Image",
                 "multi": false
-            },
-            {
-        	"component": "text",
-                "valueType": "string",
-                "name": "alt",
-                "value": "Default alt",
-                "label": "Alt Text"
             }
         ]
     },
