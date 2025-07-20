@@ -1,6 +1,4 @@
-import { decorateBlock } from '../../scripts/aem.js';
-
-export default async function decorateBlock(block) {
+async function renderPosts(block) {
     try {
         const res = await fetch('https://dev.to/api/articles');
         const data = await res.json();
@@ -38,7 +36,7 @@ export default async function decorateBlock(block) {
       const block = document.querySelector('.custom-block.block[data-block-name="custom-block"]');
   
       if (block) {
-        decorateBlock(block);
+        renderPosts(block);
       } else {
         console.warn('Custom block not found.');
       }
