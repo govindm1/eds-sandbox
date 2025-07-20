@@ -1,4 +1,5 @@
 async function renderPosts(block) {
+    console.log("Inside Custom Block");
     try {
       const res = await fetch('https://dev.to/api/articles');
       const data = await res.json();
