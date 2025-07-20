@@ -1,37 +1,58 @@
 async function renderPosts(block) {
     console.log("Inside Custom Block");
     try {
-      const res = await fetch('https://dev.to/api/articles');
-      const data = await res.json();
+        const res = await fetch('https://dev.to/api/articles');
+        const data = await res.json();
 
-      const gridContainer = document.createElement('div');
-      gridContainer.classList.add('post-card-grid');
+        const gridContainer = document.createElement('div');
+        gridContainer.classList.add('post-card-grid');
 
-      data.slice(0, 4).forEach(post => {
-        const postLink = document.createElement('a');
-        postLink.classList.add('post-link');
-        postLink.href = post.url;
-        postLink.target = '_blank';
-        postLink.rel = 'noopener noreferrer';
+        data.slice(0, 4).forEach(post => {
+          const postLink = document.createElement('a');
+          postLink.classList.add('post-link');
+          postLink.href = post.url;
+          postLink.target = "_blank";
+          postLink.rel = "noopener noreferrer";
 
-        const card = document.createElement('div');
-        card.classList.add('post-card');
+          const card = document.createElement('div');
+          card.classList.add('post-card');
 
-        const title = document.createElement('h3');
-        title.classList.add('post-card-title');
-        title.textContent = post.title;
+          const title = document.createElement('h3');
+          title.classList.add('post-card-title');
+          title.textContent = post.title;
 
-        card.appendChild(title);
-        postLink.appendChild(card);
-        gridContainer.appendChild(postLink);
-      });
+          const date = document.createElement('div');
+          date.classList.add('post-card-date');
+          const publishedDate = new Date(post.published_at);
+          date.textContent = `Published: ${publishedDate.toLocaleDateString()}`;
 
-      block.appendChild(gridContainer);
-    } catch (err) {
-      console.error('Failed to load posts:', err);
-      block.innerHTML = '<p>Error loading posts.</p>';
-    }
-  }
+          const body = document.createElement('p');
+          body.classList.add('post-card-body');
+          body.textContent = post.description;
+
+          const tagsContainer = document.createElement('div');
+          tagsContainer.classList.add('post-card-tags');
+
+          post.tag_list.forEach(tag => {
+            const tagLink = document.createElement('span'); 
+            tagLink.classList.add('post-tag');
+            tagLink.textContent = `#${tag}`;
+            tagsContainer.appendChild(tagLink);
+          });
+
+          card.appendChild(title);
+          card.appendChild(date);
+          card.appendChild(body);
+          card.appendChild(tagsContainer);
+          postLink.appendChild(card);
+          gridContainer.appendChild(postLink);
+        });
+
+        block.appendChild(gridContainer);
+      } catch (err) {
+        console.error('Failed to load posts:', err);
+        block.innerHTML = '<p>Error loading posts.</p>';
+      }
 
   function waitForBlock(selector, callback) {
     const existing = document.querySelector(selector);
