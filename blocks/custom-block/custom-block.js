@@ -1,6 +1,6 @@
 import { decorateBlock } from '../../scripts/aem.js';
 
-async function decorateBlock(block) {
+export default async function decorateBlock(block) {
     try {
         const res = await fetch('https://dev.to/api/articles');
         const data = await res.json();
