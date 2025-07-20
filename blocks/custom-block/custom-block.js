@@ -40,7 +40,7 @@ async function renderPosts(block) {
             post.tag_list.forEach(tag => {
                 const tagLink = document.createElement('span');
                 tagLink.classList.add('post-tag');
-                tagLink.textContent = `#${tag}`;
+                tagLink.textContent = `${tag}`;
                 tagsContainer.appendChild(tagLink);
             });
             
