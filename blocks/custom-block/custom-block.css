@@ -1,10 +1,23 @@
 .press-release-section {
+    h2{
+        font-size: 40px;
+    line-height: 1.2;
+    font-family: "Noto Serif", Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    color: #054e5a;
+    padding: 40px 0;
+    }
     .custom-block {
         .post-card-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 24px;
+            padding: 16px;
+            @media (min-width: 768px){                
             padding: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .post-card {
@@ -21,13 +34,14 @@
         }
 
         .post-card-title {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 600;
             letter-spacing: -.02em;
             line-height: 1.33;
             margin: 0;
             color: #054e5a;
             order: 1;
+            font-family: "Noto Serif", Arial, Helvetica, sans-serif !important;
         }
 
         .post-card-body {
@@ -36,6 +50,8 @@
             margin: 0;
             order: 2;
             color: #3e3f41;
+            font-family: "Noto Serif", Arial, Helvetica, sans-serif !important;
+            font-size: 18px;
         }
 
         .post-card-date {
@@ -46,6 +62,7 @@
             line-height: 1.5;
             margin: 0;
             order: 0;
+            font-family: "Noto Serif", Arial, Helvetica, sans-serif !important;
         }
 
         .post-card-tags {
@@ -55,6 +72,7 @@
             margin-bottom: 0;
             margin-top: 9pt;
             order: 3;
+            font-family: "Noto Serif", Arial, Helvetica, sans-serif !important;
         }
 
         .post-tag {
@@ -65,10 +83,10 @@
             border-radius: 4px;
             color: #054e5a;
             display: inline-block;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             letter-spacing: .0625em;
-            line-height: 1.7;
+            line-height: 1.5;
             text-transform: uppercase;
         }
 

@@ -43,9 +43,9 @@ async function renderPosts(block) {
                 tagLink.textContent = `#${tag}`;
                 tagsContainer.appendChild(tagLink);
             });
-
-            card.appendChild(title);
+            
             card.appendChild(date);
+            card.appendChild(title);
             card.appendChild(body);
             card.appendChild(tagsContainer);
             postLink.appendChild(card);
