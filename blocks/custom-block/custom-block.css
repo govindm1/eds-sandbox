@@ -75,7 +75,6 @@
   }
   
   }
-  .press-release-section{
     .button-container{
         text-align: center;
     width: 100%;
@@ -107,5 +106,4 @@
     transition: color .3s ease-in-out;
     }
     }
-  }
 }
