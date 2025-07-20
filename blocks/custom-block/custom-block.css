@@ -31,6 +31,7 @@
             display: flex;
             flex-direction: column;
             gap: 9pt;
+            height: 100%;
         }
 
         .post-card-title {
