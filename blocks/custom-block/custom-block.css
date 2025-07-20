@@ -21,10 +21,7 @@
         }
 
         .post-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
             padding: 16px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             cursor: pointer;
             position: relative;
             background: rgb(243, 246, 247);
