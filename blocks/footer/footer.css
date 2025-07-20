@@ -136,6 +136,14 @@ footer {
                 list-style-type: none;
                 padding-left: 0;
                 margin: 0;
+                li{
+                  a{
+                    color: #fff;
+                    &:hover{
+                      opacity: .7;
+                    }
+                  }
+                }
               }
             }
             
