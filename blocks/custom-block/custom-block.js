@@ -53,6 +53,7 @@ async function renderPosts(block) {
         console.error('Failed to load posts:', err);
         block.innerHTML = '<p>Error loading posts.</p>';
       }
+    }
 
   function waitForBlock(selector, callback) {
     const existing = document.querySelector(selector);
