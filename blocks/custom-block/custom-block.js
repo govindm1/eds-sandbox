@@ -10,7 +10,6 @@ async function renderPosts(block) {
             const postLink = document.createElement('a');
             postLink.classList.add('post-link');
             postLink.href = post.url;
-            postLink.target = "_blank";
 
             const card = document.createElement('div');
             card.classList.add('post-card');
