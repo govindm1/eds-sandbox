@@ -98,6 +98,18 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
+function loadBrandClass() {
+  document.addEventListener('DOMContrentLoaded', () => {
+    const meta = document.querySelector('meta[name="brandcssclass"]');
+    if (meta) {
+      const category = meta.getAttribute('content');
+      if (category) {
+        document.body.classList.add(category);
+      }
+    }
+  });
+}
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -109,6 +121,7 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
+    loadBrandClass();
     await waitForLCP(LCP_BLOCKS);
   }
 
@@ -156,26 +169,10 @@ function loadDelayed() {
   import('./sidekick.js').then(({ initSidekick }) => initSidekick());
 }
 
-function loadBrandClass() {
-  document.addEventListener('DOMContrentLoaded', () => {
-    console.log("loadBrandClass");
-    const meta = document.querySelector('meta[name="brandcssclass"]');
-    if (meta) {
-      console.log("loadBrandClass",meta);
-      const category = meta.getAttribute('content');
-      if (category) {
-        console.log("loadBrandClass",category);
-        document.body.classList.add(category);
-      }
-    }
-  });
-}
-
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  loadBrandClass();
 }
 
 loadPage();
