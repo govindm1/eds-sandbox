@@ -158,10 +158,13 @@ function loadDelayed() {
 
 function loadBrandClass() {
   document.addEventListener('DOMContrentLoaded', () => {
+    console.log("loadBrandClass");
     const meta = document.querySelector('meta[name="brandcssclass"]');
     if (meta) {
+      console.log("loadBrandClass",meta);
       const category = meta.getAttribute('content');
       if (category) {
+        console.log("loadBrandClass",category);
         document.body.classList.add(category);
       }
     }
