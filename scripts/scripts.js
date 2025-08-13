@@ -98,18 +98,6 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
-function loadBrandClass() {
-  document.addEventListener('DOMContrentLoaded', () => {
-    const meta = document.querySelector('meta[name="brandcssclass"]');
-    if (meta) {
-      const category = meta.getAttribute('content');
-      if (category) {
-        document.body.classList.add(category);
-      }
-    }
-  });
-}
-
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -121,8 +109,14 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
+    const meta = document.querySelector('meta[name="brandcssclass"]');
+    if (meta) {
+      const category = meta.getAttribute('content');
+      if (category) {
+        document.body.classList.add(category);
+      }
+    }
     await waitForLCP(LCP_BLOCKS);
-    loadBrandClass();
   }
 
   try {
