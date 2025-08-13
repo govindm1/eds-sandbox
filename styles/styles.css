@@ -94,8 +94,7 @@ h4, h5, h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
+  margin: 0 0 16px;
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
@@ -258,7 +257,7 @@ main .section.ds-brand-video-card :is(h1, h2, h3, h4, h5, h6) {
   text-decoration: none;
   font-family: "Noto Serif", Arial, Helvetica, sans-serif !important;
 }
-main .section.ds-brand-video-card >div p {
+main .section.ds-brand-video-card >div >p {
    -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     font-size: 20px;
@@ -333,11 +332,36 @@ main .section.ds-brand-video-card .button::after {
   width: 9pt
 }
 
+main .section.ds-brand-bg-dark :is(h1, h2, h3, h4, h5, h6){
+  font-family: "Noto Serif",Arial,Helvetica,sans-serif!important;
+  font-weight: normal;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  color: #054e5a;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  order: 1;
+  text-decoration: none;
+}
+main .section.ds-brand-bg-dark >div >p {
+      color: currentColor;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 32px;
+    text-align: inherit;
+    font-family: Noto Sans,Arial,Helvetica,sans-serif;
+}
+main .section.ds-brand-bg-dark >.default-content-wrapper {
+  width: 66%;
+}
+
 @media (min-width: 1024px) {
   main .section.ds-brand-video-card :is(h1, h2, h3, h4, h5, h6){
     font-size:40px;
   }
-  main .section.ds-brand-video-card >div p {
+  main .section.ds-brand-video-card >div >p {
     font-size:24px;
     line-height: 1.8;
   }
@@ -347,4 +371,91 @@ main .section.ds-brand-video-card .button::after {
     letter-spacing: .0625em;
     padding: 10px 30px;
   }
+  main .section.ds-brand-bg-dark >div >p {
+    margin-bottom: 36px;
+  }
+}
+
+.ds-atlascopcogroup .h1,.ds-atlascopcogroup h1 {
+    font-family: "Noto Serif",Arial,Helvetica,sans-serif!important;
+    font-size: 36px;
+    line-height: 1.33;
+    margin-bottom: 24px
+}
+
+@media (min-width: 1024px) {
+    .ds-atlascopcogroup .h1,.ds-atlascopcogroup h1 {
+        font-size:56px;
+        letter-spacing: -1px;
+        line-height: 1.14
+    }
+}
+
+.ds-atlascopcogroup .h2,.ds-atlascopcogroup h2 {
+    font-family: "Noto Serif",Arial,Helvetica,sans-serif!important;
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 1pc
+}
+
+@media (min-width: 1024px) {
+    .ds-atlascopcogroup .h2,.ds-atlascopcogroup h2 {
+        font-size:40px
+    }
+}
+
+.ds-atlascopcogroup .h3,.ds-atlascopcogroup h3 {
+    font-family: "Noto Serif",Arial,Helvetica,sans-serif!important;
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 9pt
+}
+
+@media (min-width: 1024px) {
+    .ds-atlascopcogroup .h3,.ds-atlascopcogroup h3 {
+        font-size:2pc;
+        line-height: 1.375
+    }
+}
+
+.ds-atlascopcogroup .h4,.ds-atlascopcogroup h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px
+}
+
+@media (min-width: 1024px) {
+    .ds-atlascopcogroup .h4,.ds-atlascopcogroup h4 {
+        font-size:24px;
+        line-height: 1.33
+    }
+}
+
+.ds-atlascopcogroup .h5,.ds-atlascopcogroup h5 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 4px
+}
+
+@media (min-width: 1024px) {
+    .ds-atlascopcogroup .h5,.ds-atlascopcogroup h5 {
+        font-size:20px;
+        font-weight: 600;
+        line-height: 1.4
+    }
+}
+
+.ds-atlascopcogroup .h6,.ds-atlascopcogroup h6 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+    margin-bottom: 4px
+}
+
+@media (min-width: 1024px) {
+    .ds-atlascopcogroup .h6,.ds-atlascopcogroup h6 {
+        font-size:18px
+    }
 }
