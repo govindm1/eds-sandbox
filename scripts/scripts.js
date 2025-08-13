@@ -156,10 +156,23 @@ function loadDelayed() {
   import('./sidekick.js').then(({ initSidekick }) => initSidekick());
 }
 
+function loadBrandClass() {
+  document.addEventListener('DOMContrentLoaded', () => {
+    const meta = document.querySelector('meta[name="brandcssclass"]');
+    if (meta) {
+      const category = meta.getAttribute('content');
+      if (category) {
+        document.body.classList.add(category);
+      }
+    }
+  });
+}
+
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  loadBrandClass();
 }
 
 loadPage();
