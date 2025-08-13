@@ -352,7 +352,8 @@ main .section.ds-brand-bg-dark >div >p {
     text-align: inherit;
     font-family: Noto Sans,Arial,Helvetica,sans-serif;
 }
-main .section.ds-brand-bg-dark >.default-content-wrapper {
+main .section.ds-brand-bg-dark >.default-content-wrapper :is(h1, h2, h3, h4, h5, h6),
+main .section.ds-brand-bg-dark >.default-content-wrapper >div{
   width: 66%;
 }
 
