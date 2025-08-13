@@ -227,3 +227,6 @@
       width: 24px;
     }
 }
+main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
+  color: #054e5a;
+}
