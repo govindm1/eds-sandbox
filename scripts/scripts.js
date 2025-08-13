@@ -121,8 +121,8 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-    loadBrandClass();
     await waitForLCP(LCP_BLOCKS);
+    loadBrandClass();
   }
 
   try {
