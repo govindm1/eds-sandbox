@@ -337,7 +337,6 @@ main .section.ds-brand-bg-dark :is(h1, h2, h3, h4, h5, h6){
   font-weight: normal;
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
-  color: #054e5a;
   font-weight: 400;
   margin-bottom: 0;
   margin-top: 0;
