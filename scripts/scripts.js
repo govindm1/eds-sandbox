@@ -63,7 +63,18 @@ export function getSiteRoot(path = window.location.pathname, level = 3) {
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
-  await loadCSS(`${window.hlx.codeBasePath}/styles/fonts.css`);
+  const meta = document.querySelector('meta[name="brandcssclass"]');
+  let brandFont;
+    if (meta) {
+      const category = meta.getAttribute('content');
+      if (category) {
+        brandFont = `${category}-fonts.css`;
+      } else {
+        brandFont = 'fonts.css';
+      }
+    }
+
+  await loadCSS(`${window.hlx.codeBasePath}/styles/${brandFont}`);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
