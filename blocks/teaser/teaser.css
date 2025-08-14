@@ -32,65 +32,7 @@
             }
         }
     }
-
-    /* The teaser text content */
-    .content {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background: var(--background-color);
-        padding: 1.5rem 1.5rem 1rem;
-        width: 80vw;
-        max-width: 1200px;
-        border:1px solid #000;
-
-        .title {
-            font-size: var(--heading-font-size-xl);
-            margin: 0;
-        }
-
-        .title::after {
-            border-bottom: 0;
-        }
-
-        p {
-            font-size: var(--body-font-size-s);
-            margin-bottom: 1rem;
-            animation: teaser-fade-in .6s;
-
-            &.terms-and-conditions {
-                font-size: var(--body-font-size-xs);
-                color: var(--secondary-color);
-                padding: .5rem 1rem;
-                font-style: italic;
-                border: solid var(--light-color);
-                border-width: 0 0 0 10px;
-            }
-        }
-
-        /* Add underlines to links in the text */
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Add specific spacing to buttons. These button CSS classes are automatically added by Edge Delivery Services. */
-        .button-container {
-            margin: 0;
-            padding: 0;
-
-            .button {
-                background-color: var(--primary-color);
-                border-radius: 0;
-                color: var(--dark-color);
-                font-size: var(--body-font-size-xs);
-                font-weight: bold;
-                padding: 1em 2.5em;
-                margin: 0;
-                text-transform: uppercase;
-            }
-        }
-    }
+    
 }
 
 .section.fullwidth .block.teaser {
@@ -209,3 +151,54 @@
       }
     }
   }
+
+.block.teaser.block-section-teaser .content{
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  padding-inline:30px;
+  
+}
+.block.teaser.block-section-teaser .content >div{
+    background-color: #fcf8f2;
+    border-radius: 1pc 1pc 1pc 0;
+    left: 50%;
+    padding: 2pc;
+    position: relative;
+    row-gap: 1pc;
+    top: -60px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: calc(100% - 2pc);
+    z-index: 1
+}
+@media (min-width: 768px) {
+  .block.teaser.block-section-teaser {
+    padding-bottom:6pc;
+    padding-top: 6pc
+  }
+
+  .block.teaser.block-section-teaser .content >div {
+      left:unset;
+      max-width: 60%;
+      top: unset;
+      -webkit-transform: unset;
+      transform: unset;
+      width: 100%
+  }
+}
+
+@media (min-width: 1024px) {
+    .block.teaser.block-section-teaser .content >div {
+        border-radius:24px 24px 24px 0;
+        padding: 3pc;
+        row-gap: 24px
+    }
+}
+
+@media (min-width: 1440px) {
+    .block.teaser.block-section-teaser .content >div {
+        max-width:610px
+    }
+}
