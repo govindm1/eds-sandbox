@@ -232,8 +232,8 @@
                         "value": ""
                     },
                     {
-                        "name": "Side-by-side",
-                        "value": "side-by-side"
+                        "name": "Block-Section-Teaser",
+                        "value": "block-section-teaser"
                     }
                 ]
             },
