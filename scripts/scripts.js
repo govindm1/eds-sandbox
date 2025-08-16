@@ -64,16 +64,17 @@ export function getSiteRoot(path = window.location.pathname, level = 3) {
  */
 async function loadFonts() {
   const meta = document.querySelector('meta[name="brandcssclass"]');
+  let category;
   let brandFont;
     if (meta) {
-      const category = meta.getAttribute('content');
+      category = meta.getAttribute('content');
       if (category) {
         brandFont = `${category}-fonts.css`;
       } else {
         brandFont = 'fonts.css';
       }
     }
-
+  await loadCSS(`${window.hlx.codeBasePath}/styles/${category}-styles.css`);
   await loadCSS(`${window.hlx.codeBasePath}/styles/${brandFont}`);
   try {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
