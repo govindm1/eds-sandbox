@@ -1,3 +1,5 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
+import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
@@ -24,4 +26,6 @@ export default function decorate(block) {
       moveInstrumentation(img, optimizedPic.querySelector('img'));
       img.closest('picture').replaceWith(optimizedPic);
     });
+    block.textContent = '';
+  block.append(ul);
 }
