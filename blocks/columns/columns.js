@@ -12,7 +12,7 @@ export default function decorate(block) {
 
       if (pic && img) {
         const imageLink = img.dataset.imageLink || '';
-        const optimizedPic = createOptimizedPicture(imageLink || img.src, img.alt);
+        const optimizedPic = createOptimizedPicture(imageLink, img.src, img.alt);
         pic.replaceWith(optimizedPic); 
       }
 
