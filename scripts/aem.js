@@ -361,7 +361,7 @@ function createOptimizedPicture(
       console.log('Image Source aem:', src);
       console.log('Alt Text aem:', alt);
       console.log('Image Link (from JSON) aem:', imageLink);
-      img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
+      //img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
   console.log("picture val ",picture);
