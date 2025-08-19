@@ -326,12 +326,10 @@ function getMetadata(name, doc = document) {
 function createOptimizedPicture(
   src,
   alt = '',
-  imageLink = '',
   eager = false,
   breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }],
 ) {
   const url = new URL(src, window.location.href);
-
   const picture = document.createElement('picture');
   const { pathname } = url;
   const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
@@ -353,12 +351,9 @@ function createOptimizedPicture(
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
-      console.log("alt image ",alt);
-      console.log("imageLink ",imageLink);
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
-      img.setAttribute('imageLink', imageLink);
       picture.appendChild(img);
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
