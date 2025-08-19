@@ -12,24 +12,25 @@ export default function decorate(block) {
       if (pic && img) {
         const imgSrc = img.src;
         const imgAlt = img.alt;
-        const imageLink = img.dataset.imageLink?.trim();
+        const imageLink = img.imageLink?.trim();
+
+        // Remove existing children to ensure <picture> is the only child
+        col.innerHTML = '';
 
         const optimizedPic = createOptimizedPicture(imgSrc, imgAlt);
         console.log('Image Source:', imgSrc);
         console.log('Alt Text:', imgAlt);
         console.log('Image Link (from JSON):', imageLink);
-        // Wrap image in anchor tag if imageLink exists
+
         if (imageLink) {
           const link = document.createElement('a');
           link.href = imageLink;
           link.appendChild(optimizedPic);
-          pic.replaceWith(link);
+          col.appendChild(link);
         } else {
-          pic.replaceWith(optimizedPic);
+          col.appendChild(optimizedPic);
         }
-      }
 
-      if (pic && col.children.length === 1) {
         col.classList.add('columns-img-col');
       }
     });

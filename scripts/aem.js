@@ -354,7 +354,11 @@ function createOptimizedPicture(
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
+      img.setAttribute('data-image-link', imageLink);
       picture.appendChild(img);
+      console.log('Image Source aem:', imgSrc);
+      console.log('Alt Text aem:', imgAlt);
+      console.log('Image Link (from JSON) aem:', imageLink);
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
