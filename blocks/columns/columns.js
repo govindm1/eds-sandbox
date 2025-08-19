@@ -19,9 +19,6 @@ export default function decorate(block) {
           const imgAlt = img.alt;
           const imageLink = img.imageLink;
   
-          // Remove existing children to ensure <picture> is the only child
-          col.innerHTML = '';
-  
           const optimizedPic = createOptimizedPicture(imgSrc, imgAlt);
           console.log('Image Source:', imgSrc);
           console.log('Alt Text:', imgAlt);
