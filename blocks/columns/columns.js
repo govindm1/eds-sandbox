@@ -11,7 +11,8 @@ export default function decorate(block) {
       const img = pic?.querySelector('img');
 
       if (pic && img) {
-        const optimizedPic = createOptimizedPicture(img.src, img.alt);
+        const imageLink = img.dataset.imageLink || '';
+        const optimizedPic = createOptimizedPicture(imageLink || img.src, img.alt);
         pic.replaceWith(optimizedPic); 
       }
 
