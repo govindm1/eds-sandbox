@@ -92,9 +92,9 @@
                 "label": "Alt Text"
             },
             {
-        	"component": "imageLink",
+        	"component": "text",
                 "valueType": "string",
-                "name": "link",
+                "name": "imageLink",
                 "value": "",
                 "label": "Image URL"
             }
