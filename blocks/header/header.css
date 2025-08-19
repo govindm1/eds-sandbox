@@ -42,7 +42,7 @@ header nav[aria-expanded="true"] {
   }
 
   header nav[aria-expanded="true"] {
-    min-height: 0;
+    min-height: 6pc;
     overflow: visible;
   }
 }
@@ -56,6 +56,8 @@ header nav .nav-brand {
   align-self: stretch;
   min-height: 6pc;
   background-color: #054e5a;
+  min-width: 220px;
+  display: flex;
 
   p {
     -webkit-box-pack: center;
