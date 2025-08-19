@@ -319,6 +319,7 @@ function getMetadata(name, doc = document) {
  * Returns a picture element with webp and fallbacks
  * @param {string} src The image URL
  * @param {string} [alt] The image alternative text
+ * @param {string} [imageLink] The image anchor link
  * @param {boolean} [eager] Set loading attribute to eager
  * @param {Array} [breakpoints] Breakpoints and corresponding params (eg. width)
  * @returns {Element} The picture element
@@ -334,7 +335,6 @@ function createOptimizedPicture(
   const picture = document.createElement('picture');
   const { pathname } = url;
   const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
-  console.log('[columns.js] imageLink from original img:', imageLink);
   // webp
   breakpoints.forEach((br) => {
     const source = document.createElement('source');
