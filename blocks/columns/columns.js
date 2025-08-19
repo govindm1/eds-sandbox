@@ -1,3 +1,5 @@
+import { createOptimizedPicture } from '../../scripts/aem.js';
+
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
@@ -6,12 +8,15 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
-      if (pic) {
-        const picWrapper = pic.closest('div');
-        if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
-        }
+      const img = pic?.querySelector('img');
+
+      if (pic && img) {
+        const optimizedPic = createOptimizedPicture(img.src, img.alt);
+        pic.replaceWith(optimizedPic); 
+      }
+
+      if (pic && col.children.length === 1) {
+        col.classList.add('columns-img-col');
       }
     });
   });
