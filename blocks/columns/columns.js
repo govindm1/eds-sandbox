@@ -1,14 +1,9 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
-  // setup image columns  
-  const ul = document.createElement('ul');
-  [...block.children].forEach((row) => {    
-    const li = document.createElement('li');    
-    moveInstrumentation(row, li);
+  // setup image columns
+  [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
       if (pic) {
@@ -18,14 +13,6 @@ export default function decorate(block) {
           picWrapper.classList.add('columns-img-col');
         }
       }
-    });    
-    ul.append(li);
-  });
-    ul.querySelectorAll('picture > img').forEach((img) => {
-      const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]);
-      moveInstrumentation(img, optimizedPic.querySelector('img'));
-      img.closest('picture').replaceWith(optimizedPic);
     });
-    block.textContent = '';
-  block.append(ul);
+  });
 }
