@@ -22,7 +22,7 @@ export default function decorate(block) {
           // Remove existing children to ensure <picture> is the only child
           pic.innerHTML = '';
   
-          const optimizedPic = createOptimizedPicture(imgSrc, imgAlt);
+          const optimizedPic = createOptimizedPicture(imgSrc, imgAlt, imageLink);
           console.log('Image Source:', imgSrc);
           console.log('Alt Text:', imgAlt);
           console.log('Image Link (from JSON):', imageLink);
