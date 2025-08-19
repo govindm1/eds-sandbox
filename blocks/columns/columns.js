@@ -5,7 +5,8 @@ export default function decorate(block) {
   // setup image columns  
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {    
-    const li = document.createElement('li');
+    const li = document.createElement('li');    
+    moveInstrumentation(row, li);
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
       if (pic) {
