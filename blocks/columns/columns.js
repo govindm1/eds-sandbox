@@ -12,7 +12,7 @@ export default function decorate(block) {
       if (pic && img) {
         const imgSrc = img.src;
         const imgAlt = img.alt;
-        const imageLink = img.dataset.imageLink?.trim();
+        const imageLink = img.imageLink?.trim();
 
         const optimizedPic = createOptimizedPicture(imgSrc, imgAlt);
         console.log('Image Source:', imgSrc);
