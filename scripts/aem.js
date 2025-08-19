@@ -353,6 +353,8 @@ function createOptimizedPicture(
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
+      console.log("alt image ",alt);
+      console.log("imageLink ",imageLink);
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
@@ -480,9 +482,6 @@ function decorateIcon(span, prefix = '', alt = '') {
   const iconName = Array.from(span.classList)
     .find((c) => c.startsWith('icon-'))
     .substring(5);
-    
-    console.log("alt image ",alt);
-    console.log("imageLink ",imageLink);
   const img = document.createElement('img');
   img.dataset.iconName = iconName;
   img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
