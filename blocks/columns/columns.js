@@ -7,34 +7,32 @@ export default function decorate(block) {
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
-      const img = pic?.querySelector('img');
-
-      if (pic && img) {
+    
+      if (pic) {
         const picWrapper = pic.closest('div');
         if (picWrapper && picWrapper.children.length === 1) {
           console.log('Inside picwrapper');
-          // picture is only content in column
+          
           picWrapper.classList.add('columns-img-col');
-          const imgSrc = img.src;
-          const imgAlt = img.alt;
-          const imageLink = img.getAttribute('data-image-link');
-  
-          // Remove existing children to ensure <picture> is the only child
-          pic.innerHTML = '';
-  
-          const optimizedPic = createOptimizedPicture(imgSrc, imgAlt, imageLink);
+          const img = pic.querySelector('img');
+          const imgSrc = img?.src;
+          const imgAlt = img?.alt || '';
+          const imageLink = pic.getAttribute('data-image-link');
+    
           console.log('Image Source:', imgSrc);
           console.log('Alt Text:', imgAlt);
-          console.log('Image Link (from JSON):', imageLink);
-  
+          console.log('Image Link:', imageLink);
+    
+          pic.innerHTML = ''; 
+    
+          const optimizedPic = createOptimizedPicture(imgSrc, imgAlt, imageLink);
+    
           if (imageLink) {
-            console.log("Inside imageLink");
             const link = document.createElement('a');
             link.href = imageLink;
             link.appendChild(optimizedPic);
             col.appendChild(link);
           } else {
-            console.log("Not Inside imageLink");
             col.appendChild(optimizedPic);
           }
         }

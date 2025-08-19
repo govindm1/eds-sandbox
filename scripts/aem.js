@@ -334,7 +334,7 @@ function createOptimizedPicture(
   const picture = document.createElement('picture');
   const { pathname } = url;
   const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
-
+  console.log('[columns.js] imageLink from original img:', imageLink);
   // webp
   breakpoints.forEach((br) => {
     const source = document.createElement('source');
@@ -356,7 +356,7 @@ function createOptimizedPicture(
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
       console.log('Set imageLink attribute:', imageLink);
-      img.setAttribute('data-image-link', imageLink);
+      picture.setAttribute('data-image-link', imageLink);
       picture.appendChild(img);
       console.log('Image Source aem:', src);
       console.log('Alt Text aem:', alt);
