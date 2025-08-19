@@ -349,19 +349,21 @@ function createOptimizedPicture(
     if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
-      //source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
+      console.log('Set imageLink attribute:', imageLink);
+      picture.setAttribute('imageLink', imageLink);
+      source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
-      //img.setAttribute('alt', alt);
+      img.setAttribute('alt', alt);
       console.log('Set imageLink attribute:', imageLink);
       picture.setAttribute('imageLink', imageLink);
       picture.appendChild(img);
       console.log('Image Source aem:', src);
       console.log('Alt Text aem:', alt);
       console.log('Image Link (from JSON) aem:', imageLink);
-      //img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
+      img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
   console.log("picture val ",picture);
