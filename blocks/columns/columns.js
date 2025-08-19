@@ -17,7 +17,7 @@ export default function decorate(block) {
           picWrapper.classList.add('columns-img-col');
           const imgSrc = img.src;
           const imgAlt = img.alt;
-          const imageLink = 'https://www.facebook.com/AtlasCopcoGroup/';
+          const imageLink = img.imageLink;
   
           // Remove existing children to ensure <picture> is the only child
           pic.innerHTML = '';
