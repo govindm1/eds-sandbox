@@ -350,7 +350,7 @@ function createOptimizedPicture(
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
       console.log('Set imageLink attribute:', imageLink);
-      picture.setAttribute('imageLink', imageLink);
+      picture.setAttribute('image-link', imageLink);
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
