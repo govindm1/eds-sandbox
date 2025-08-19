@@ -236,6 +236,7 @@ header nav .nav-sections ul>li>ul>li {
 @media (width >=900px) {
   header .nav-brand>div {
     padding: 0;
+    height: 100%;
   }
 
   header nav .nav-sections {
