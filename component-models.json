@@ -94,7 +94,7 @@
             {
         	"component": "text",
                 "valueType": "string",
-                "name": "image-link",
+                "name": "imagelink",
                 "value": "",
                 "label": "Image URL"
             }

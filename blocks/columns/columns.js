@@ -17,7 +17,7 @@ export default function decorate(block) {
           const img = pic.querySelector('img');
           const imgSrc = img?.src;
           const imgAlt = img?.alt || '';
-          const imageLink = pic.getAttribute('image-link');
+          const imageLink = pic.getAttribute('imagelink');
     
           console.log('Image Source:', imgSrc);
           console.log('Alt Text:', imgAlt);

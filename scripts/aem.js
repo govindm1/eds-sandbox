@@ -350,7 +350,7 @@ function createOptimizedPicture(
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
       console.log('Set imageLink attribute:', imageLink);
-      picture.setAttribute('image-link', imageLink);
+      picture.setAttribute('imagelink', imageLink);
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
@@ -358,7 +358,7 @@ function createOptimizedPicture(
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
       console.log('Set imageLink attribute:', imageLink);
-      picture.setAttribute('image-link', imageLink);
+      picture.setAttribute('imagelink', imageLink);
       picture.appendChild(img);
       console.log('Image Source aem:', src);
       console.log('Alt Text aem:', alt);
