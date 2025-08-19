@@ -319,7 +319,7 @@ function getMetadata(name, doc = document) {
  * Returns a picture element with webp and fallbacks
  * @param {string} src The image URL
  * @param {string} [alt] The image alternative text
- * @param {string} [imageLink] The image anchor link
+ * @param {string} [imagelink] The image anchor link
  * @param {boolean} [eager] Set loading attribute to eager
  * @param {Array} [breakpoints] Breakpoints and corresponding params (eg. width)
  * @returns {Element} The picture element
@@ -327,7 +327,7 @@ function getMetadata(name, doc = document) {
 function createOptimizedPicture(
   src,
   alt = '',
-  imageLink = '',
+  imagelink = '',
   eager = false,
   breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }],
 ) {
@@ -349,20 +349,20 @@ function createOptimizedPicture(
     if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
-      console.log('Set imageLink attribute:', imageLink);
-      picture.setAttribute('imagelink', imageLink);
+      console.log('Set imageLink attribute:', imagelink);
+      picture.setAttribute('imagelink', imagelink);
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
-      console.log('Set imageLink attribute:', imageLink);
-      picture.setAttribute('imagelink', imageLink);
       picture.appendChild(img);
+      console.log('Set imageLink attribute:', imagelink);
+      picture.setAttribute('imagelink', imagelink);
       console.log('Image Source aem:', src);
       console.log('Alt Text aem:', alt);
-      console.log('Image Link (from JSON) aem:', imageLink);
+      console.log('Image Link (from JSON) aem:', imagelink);
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
