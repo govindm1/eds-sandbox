@@ -17,7 +17,7 @@ export default function decorate(block) {
           picWrapper.classList.add('columns-img-col');
           const imgSrc = img.src;
           const imgAlt = img.alt;
-          const imageLink = img.dataset.imageLink;
+          const imageLink = 'https://www.facebook.com/AtlasCopcoGroup/';
   
           // Remove existing children to ensure <picture> is the only child
           pic.innerHTML = '';
@@ -28,11 +28,13 @@ export default function decorate(block) {
           console.log('Image Link (from JSON):', imageLink);
   
           if (imageLink) {
+            console.log("Inside imageLink");
             const link = document.createElement('a');
             link.href = imageLink;
             link.appendChild(optimizedPic);
             col.appendChild(link);
           } else {
+            console.log("Not Inside imageLink");
             col.appendChild(optimizedPic);
           }
         }
