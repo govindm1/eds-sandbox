@@ -353,6 +353,8 @@ function createOptimizedPicture(
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
+      console.log("alt image ",alt);
+      console.log("imageLink ",imageLink);
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
