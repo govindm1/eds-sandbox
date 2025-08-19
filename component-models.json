@@ -95,7 +95,7 @@
         	"component": "text",
                 "valueType": "string",
                 "name": "imageLink",
-                "value": "",
+                "value": "https://www.facebook.com/AtlasCopcoGroup/",
                 "label": "Image URL"
             }
         ]
