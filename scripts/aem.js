@@ -356,7 +356,7 @@ function createOptimizedPicture(
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
       console.log('Set imageLink attribute:', imageLink);
-      picture.setAttribute('data-image-link', imageLink);
+      img.setAttribute('data-image-link', imageLink);
       picture.appendChild(img);
       console.log('Image Source aem:', src);
       console.log('Alt Text aem:', alt);
