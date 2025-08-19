@@ -358,8 +358,9 @@ function createOptimizedPicture(
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
-
+  console.log("picture val ",picture);
   return picture;
+ 
 }
 
 /**
