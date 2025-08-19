@@ -354,7 +354,7 @@ function createOptimizedPicture(
     } else {
       const img = document.createElement('img');
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
-      img.setAttribute('alt', alt);
+      //img.setAttribute('alt', alt);
       console.log('Set imageLink attribute:', imageLink);
       picture.setAttribute('imageLink', imageLink);
       picture.appendChild(img);
