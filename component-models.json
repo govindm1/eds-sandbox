@@ -90,6 +90,13 @@
                 "name": "alt",
                 "value": "Default alt",
                 "label": "Alt Text"
+            },
+            {
+        	"component": "imageLink",
+                "valueType": "string",
+                "name": "link",
+                "value": "",
+                "label": "Image URL"
             }
         ]
     },
