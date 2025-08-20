@@ -316,6 +316,7 @@ a.button.primary {
     background-color: var(--mainColor);
     border: 2px solid var(--mainColor);
     color: #fff;
+    line-height: 1;
 }
 
 a.button.primary:hover{
@@ -325,14 +326,17 @@ a.button.primary:hover{
 a.button.secondary{
     background-color: transparent;
     border: 2px solid var(--mainColor);
-    color: var(--mainColor)
+    color: var(--mainColor);
+    line-height: 1;
 }
 a.button.secondary:hover{
     background-color: var(--mainColor);
     border-color: var(--mainColor);
     color: #fff
 }
-
+.ds-nano {
+    margin: 0;
+}
 .ds-nano p {
     color: var(--mainColor);
     font-size: 20px;
