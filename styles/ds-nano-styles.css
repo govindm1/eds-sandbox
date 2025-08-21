@@ -310,7 +310,8 @@ a.button:any-link, button {
     text-transform: inherit;
     -webkit-transition: border .3s ease-in-out,color .3s ease-in-out,background-color .3s ease-in-out,opacity .3s ease-in-out;
     transition: border .3s ease-in-out,color .3s ease-in-out,background-color .3s ease-in-out,opacity .3s ease-in-out;
-    white-space: nowrap
+    white-space: nowrap;
+    line-height: 1;
 }
 a.button.primary {
     background-color: var(--mainColor);
@@ -359,6 +360,9 @@ a.button.secondary:hover{
     padding: 0px 20px;
     max-width: 1450px;
     height: auto;
+}
+.ds-nano .teaser.block a.button:any-link, button{
+    color: #003565 !important;
 }
 .ds-nano .teaser.block >div >div:not(:empty){
     padding:40px 1pc;
