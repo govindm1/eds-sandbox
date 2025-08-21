@@ -335,6 +335,9 @@ function createOptimizedPicture(
   const picture = document.createElement('picture');
   const { pathname } = url;
   const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
+  console.log('[createOptimizedPicture] src:', src);
+  console.log('[createOptimizedPicture] alt:', alt);
+  console.log('[createOptimizedPicture] imagelink:', imagelink);
   // webp
   breakpoints.forEach((br) => {
     const source = document.createElement('source');
@@ -349,7 +352,6 @@ function createOptimizedPicture(
     if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
-      console.log('Set imageLink attribute:', imagelink);
       picture.setAttribute('imagelink', imagelink);
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
@@ -358,11 +360,7 @@ function createOptimizedPicture(
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
       picture.appendChild(img);
-      console.log('Set imageLink attribute:', imagelink);
       picture.setAttribute('imagelink', imagelink);
-      console.log('Image Source aem:', src);
-      console.log('Alt Text aem:', alt);
-      console.log('Image Link (from JSON) aem:', imagelink);
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
