@@ -352,7 +352,7 @@ function createOptimizedPicture(
     if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
-      picture.setAttribute('imagelink', image_url);
+      picture.setAttribute('data-imagelink', image_url);
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
@@ -360,7 +360,7 @@ function createOptimizedPicture(
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
       picture.appendChild(img);
-      picture.setAttribute('imagelink', image_url);
+      picture.setAttribute('data-imagelink', image_url);
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
