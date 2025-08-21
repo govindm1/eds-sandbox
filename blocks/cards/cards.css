@@ -285,7 +285,6 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   margin-bottom: 0px;                                  
 }
 .ds-nano .cards-wrapper{
-  max-width: 1024px;
   margin: 0px auto;
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -295,7 +294,10 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
     padding-top: 40px;
     max-width: 220px;
     margin: 0px auto;
-
+}
+.ds-nano .cards-wrapper ul {
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-gap: 56px;
 }
 .ds-nano .cards-wrapper li{
   margin-bottom: 40px !important;
