@@ -36,8 +36,9 @@
               "page": {
                 "resourceType": "core/franklin/components/image/v1/image",
                 "template": {
-                  "name": "Image URL",
-                  "model": "imagelink"
+                  "name": "Image",
+                  "model": "image",
+                  "image_url": "https://www.sample.com"
                 }
               }
             }

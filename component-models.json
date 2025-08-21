@@ -92,11 +92,10 @@
                 "label": "Alt Text"
             },
             {
-        	"component": "text",
-                "valueType": "string",
-                "name": "imagelink",
-                "value": "https://www.example.com",
-                "label": "Image URL"
+                "component": "richtext",
+                "name": "image_url",
+                "label": "Image URL",
+                "valueType": "string"
             }
         ]
     },
