@@ -319,7 +319,7 @@ function getMetadata(name, doc = document) {
  * Returns a picture element with webp and fallbacks
  * @param {string} src The image URL
  * @param {string} [alt] The image alternative text
- * @param {string} [imagelink] The image anchor link
+ * @param {string} [image_url] The image anchor link
  * @param {boolean} [eager] Set loading attribute to eager
  * @param {Array} [breakpoints] Breakpoints and corresponding params (eg. width)
  * @returns {Element} The picture element
@@ -327,7 +327,7 @@ function getMetadata(name, doc = document) {
 function createOptimizedPicture(
   src,
   alt = '',
-  imagelink = '',
+  image_url = '',
   eager = false,
   breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }],
 ) {
@@ -335,9 +335,9 @@ function createOptimizedPicture(
   const picture = document.createElement('picture');
   const { pathname } = url;
   const ext = pathname.substring(pathname.lastIndexOf('.') + 1);
-  console.log('[createOptimizedPicture] src:', src);
-  console.log('[createOptimizedPicture] alt:', alt);
-  console.log('[createOptimizedPicture] imagelink:', imagelink);
+  console.log('[createOptimizedPicture] src1:', src);
+  console.log('[createOptimizedPicture] alt1:', alt);
+  console.log('[createOptimizedPicture] image_url1:', image_url);
   // webp
   breakpoints.forEach((br) => {
     const source = document.createElement('source');
@@ -352,7 +352,7 @@ function createOptimizedPicture(
     if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
-      picture.setAttribute('imagelink', imagelink);
+      picture.setAttribute('imagelink', image_url);
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
       picture.appendChild(source);
     } else {
@@ -360,7 +360,7 @@ function createOptimizedPicture(
       img.setAttribute('loading', eager ? 'eager' : 'lazy');
       img.setAttribute('alt', alt);
       picture.appendChild(img);
-      picture.setAttribute('imagelink', imagelink);
+      picture.setAttribute('imagelink', image_url);
       img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=medium`);
     }
   });
