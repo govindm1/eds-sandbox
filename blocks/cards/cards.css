@@ -294,8 +294,7 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   margin-top: 2rem;
 }
 
-.ds-nano {
-  .cards-card-body h3{ 
+.ds-nano .cards-card-body h3{ 
   color : #003565;
   border: 1px solid transparent;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -303,12 +302,12 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   font-weight: 700;
   margin: 0 0 10px;
 }
-.cards-card-body{
+.ds-nano .cards-card-body{
   margin: 0 !important;
   padding: 8px 24px 40px;
   text-align: center;
 }
-.cards-wrapper li{
+.ds-nano .cards-wrapper li{
   background-color: #def0fe !important;
   justify-content: flex-end;
   margin-bottom: 14px;
@@ -317,7 +316,7 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   color: #003565;
   margin: 0 1pc;
 }
-.cards-card-body .button-container a{
+.ds-nano .cards-card-body .button-container a{
   background-color: transparent;
     border: 2px solid #003565;
     border-radius: 75pt;
@@ -328,7 +327,7 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
     padding: 8px 3pc 8px 24px;
     position: relative;
 }
-.cards-card-body .button-container a::after{
+.ds-nano .cards-card-body .button-container a::after{
   content: "\e5cc";
   font-family: Material Icons;
   font-size: 24px;
@@ -336,7 +335,7 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   right: 18px;
   top: 4px;
 }
-.cards-card-body >div >p{
+.ds-nano .cards-card-body >div >p{
   font-size: 20px;
   line-height: 1.6;
   text-align: center;
@@ -346,14 +345,25 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
   margin-bottom: 30px;
 }
-.cards-card-body .button-container{ 
+.ds-nano .cards-card-body .button-container{ 
   padding: 20px 0; 
   margin-bottom: 0px;                                  
 }
-.cards-wrapper{
+.ds-nano .cards-wrapper{
   max-width: 1024px;
   margin: 0px auto;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+.ds-nano .cards .cards-card-image {
+    line-height: 0;
+    padding-top: 40px;
+    max-width: 220px;
+    margin: 0px auto;
+
 }
+.ds-nano .cards-wrapper li{
+  margin-bottom: 40px !important;
+  width: 282px;
+}
+ 
