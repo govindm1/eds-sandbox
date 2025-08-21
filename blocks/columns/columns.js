@@ -23,7 +23,7 @@ export default function decorate(block) {
           console.log('Alt Text:', imgAlt);
           console.log('Image Link:', imageLink);
     
-          //pic.innerHTML = ''; 
+          pic.innerHTML = ''; 
     
           const optimizedPic = createOptimizedPicture(imgSrc, imgAlt, imageLink);
     
