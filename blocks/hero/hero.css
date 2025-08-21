@@ -72,3 +72,29 @@ main .hero-container {
   margin: 0 auto;
   padding-inline: 30px;
 }
+
+.ds-nano .hero-wrapper h2{
+  color: #fff;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 0;
+  max-width: 612px;
+  word-break: break-word;
+}
+.ds-nano .hero ::before{
+  background: linear-gradient(110.49deg, rgba(0, 36, 68, .69) 13.9%, rgba(5, 74, 117, 0) 90.75%);
+  background-blend-mode: multiply;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}
+@media (min-width: 1024px) {
+  .ds-nano .hero-wrapper h2{
+    font-size: 56px;
+  }
+}
