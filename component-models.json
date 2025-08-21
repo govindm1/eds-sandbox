@@ -95,7 +95,7 @@
         	"component": "text",
                 "valueType": "string",
                 "name": "imagelink",
-                "value": "",
+                "value": "https://www.example.com",
                 "label": "Image URL"
             }
         ]
