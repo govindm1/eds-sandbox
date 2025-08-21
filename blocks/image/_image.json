@@ -1,0 +1,61 @@
+{
+    "definitions": [{
+          "title": "Image",
+          "id": "image",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/image/v1/image",
+                "template": {
+                  "name": "Image",
+                  "model": "image",
+                  "image_url": "https://www.sample.com"
+                }
+              }
+            }
+          }
+        }],
+    "models": [
+      {
+        "id": "image",
+        "fields": [
+            {
+                "component": "reference",
+                "valueType": "string",
+                "name": "fileReference",
+                "label": "Image",
+                "multi": false
+            },
+            {
+        	"component": "text",
+                "valueType": "string",
+                "name": "alt",
+                "value": "Default alt",
+                "label": "Alt Text"
+            },
+            {
+                "component": "text",
+                "name": "image_url",
+                "label": "Image URL",
+                "valueType": "string"
+            }
+        ]
+    }
+    ],
+    "filters": [
+      {
+        "id": "columns",
+        "components": []
+      },
+      {
+        "id": "column",
+        "components": [
+          "text",
+          "image",
+          "button",
+          "title",
+          "video"
+        ]
+      }
+  ]
+}
