@@ -92,7 +92,7 @@
                 "label": "Alt Text"
             },
             {
-                "component": "richtext",
+                "component": "text",
                 "name": "image_url",
                 "label": "Image URL",
                 "valueType": "string"
