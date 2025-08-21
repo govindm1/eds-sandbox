@@ -251,7 +251,6 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   min-height: 600px;
   border-radius: 1pc !important;
   color: #003565;
-  margin: 0 1pc;
 }
 .ds-nano .cards-card-body .button-container a{
   background-color: transparent;
@@ -301,6 +300,5 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
 }
 .ds-nano .cards-wrapper li{
   margin-bottom: 40px !important;
-  width: 282px;
 }
  
