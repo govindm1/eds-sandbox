@@ -231,69 +231,6 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   color: #054e5a;
 }
 
-
-.cards-card-body h3{ 
-  color : #003565;
-  border: 1px solid transparent;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 0 10px;
-}
-.cards-card-body{
-  margin: 0 !important;
-  padding: 8px 24px 40px;
-  text-align: center;
-}
-.cards-wrapper li{
-  background-color: #def0fe !important;
-  justify-content: flex-end;
-  margin-bottom: 14px;
-  min-height: 600px;
-  border-radius: 1pc !important;
-  color: #003565;
-  margin: 0 1pc;
-}
-.cards-card-body .button-container a{
-  background-color: transparent;
-    border: 2px solid #003565;
-    border-radius: 75pt;
-    color: #003565;
-    float: none;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
-    margin-bottom: 0;
-    padding: 8px 3pc 8px 24px;
-    position: relative;
-}
-.cards-card-body .button-container a::after{
-  content: "\e5cc";
-  font-family: Material Icons;
-  font-size: 24px;
-  position: absolute;
-  right: 18px;
-  top: 4px;
-}
-.cards-card-body >div >p{
-  font-size: 20px;
-  line-height: 1.6;
-  text-align: center;
-  /* padding-top: 0; */
-  margin-top: 0;
-  color: var(--mainColor);
-  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
-  margin-bottom: 30px;
-}
-.cards-card-body .button-container{ 
-  padding: 20px 0; 
-  margin-bottom: 0px;                                  
-}
-.cards-wrapper{
-  max-width: 1024px;
-  margin: 0px auto;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
 .ds-nano .cards-card-body h3{ 
   color : #003565;
   border: 1px solid transparent;
