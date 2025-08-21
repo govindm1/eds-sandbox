@@ -10,7 +10,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
     // load footer as fragment
     const footerMeta = getMetadata('footer');
-    const footerPath = footerMeta ? new URL(footerMeta).pathname : `${getSiteRoot()}/${getBrandName()}/footer`;
+    const footerPath = footerMeta ? new URL(footerMeta).pathname : `${getSiteRoot()}/${getBrandName().split('ds-')[1]}/footer`;
     const fragment = await loadFragment(footerPath);
 
     // decorate footer DOM
