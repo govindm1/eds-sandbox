@@ -32,6 +32,7 @@ footer {
                 gap: 8px;
 
                 .columns-img-col {
+                  flex: 0;
                   picture {
                     height: 3pc;
                     width: 3pc;
