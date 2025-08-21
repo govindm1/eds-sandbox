@@ -59,6 +59,10 @@ export function getSiteRoot(path = window.location.pathname, level = 3) {
   return path.split('/', level).join('/');
 }
 
+export function getBrandName (){
+  const meta = document.querySelector('meta[name="brandcssclass"]');
+  return meta.getAttribute('content');
+}
 /**
  * load fonts.css and set a session storage flag
  */

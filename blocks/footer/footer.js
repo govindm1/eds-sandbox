@@ -1,5 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { getSiteRoot } from '../../scripts/scripts.js';
+import { getBrandName } from '../../scripts/scripts.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
@@ -9,7 +10,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
     // load footer as fragment
     const footerMeta = getMetadata('footer');
-    const footerPath = footerMeta ? new URL(footerMeta).pathname : `${getSiteRoot()}/footer`;
+    const footerPath = footerMeta ? new URL(footerMeta).pathname : `${getSiteRoot()}/${getBrandName()}/footer`;
     const fragment = await loadFragment(footerPath);
 
     // decorate footer DOM
