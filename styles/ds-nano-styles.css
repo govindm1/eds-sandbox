@@ -348,12 +348,20 @@ a.button.secondary:hover{
 }
 .ds-nano .ds-brand-content-section-with-image.ds-brand-negative-bg {
     background: #003565;
+    padding-bottom: 4rem !important;
+    padding-top: 4rem !important;
 }
 .ds-nano .teaser.block {
     color: var(--mainColor);
     font-family: Source Sans Pro,Arial,Helvetica,sans-serif;
     position: relative;
-    width: 100%
+    width: 100%;
+    padding: 0px 20px;
+    max-width: 1450px;
+    height: auto;
+}
+.ds-nano .teaser.block >div >div:not(:empty){
+    padding:40px 1pc;
 }
 
 .ds-nano .ds-brand-content-section-with-image {
