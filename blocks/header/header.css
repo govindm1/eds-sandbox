@@ -361,7 +361,7 @@ header nav .nav-tools {
   left: 0;
   padding-left: 0;
   padding-right: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0
 }
