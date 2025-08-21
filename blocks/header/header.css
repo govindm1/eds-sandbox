@@ -327,3 +327,35 @@ header nav .nav-sections ul>li>ul>li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+.ds-nano header nav .nav-brand{
+  background-color: transparent;
+  max-width: 124px;
+  min-height: auto;
+  min-width: 124px;
+}
+.ds-nano header nav .nav-brand img {
+  max-width: 124px;
+}
+.ds-nano header nav[aria-expanded="true"]{
+  min-height: auto;
+}
+
+.ds-nano header .nav-wrapper{
+  background-color: #003565;
+  color: #fff;
+  padding-bottom: 18px!important;
+  padding-top: 18px!important;
+  position: relative;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  z-index: 11;
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(-15.59%,#003565),color-stop(76.7%,rgba(0,53,101,0)));
+  background: linear-gradient(180deg,#003565 -15.59%,rgba(0,53,101,0) 76.7%);
+  left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  right: 0;
+  top: 0
+}
