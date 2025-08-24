@@ -1,3 +1,10 @@
+footer{
+  .footer-wrapper{
+    p,a{
+      color:inherit;
+    }
+  }
+}
 .ds-atlascopcogroup {
   footer {
 
@@ -497,7 +504,6 @@
       }
 
       .footer-legal {
-        background-color: #04424d;
         padding-bottom: 12px;
         padding-top: 12px;
         padding-inline: 30px;
