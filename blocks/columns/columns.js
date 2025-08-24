@@ -19,11 +19,11 @@ export default function decorate(block) {
           const imgAlt = img?.alt || '';
           const imageLink = pic.getAttribute('imagelink');
     
-          console.log('Image Source tt:', imgSrc);
+          console.log('Image Source ss:', imgSrc);
           console.log('Alt Text:', imgAlt);
           console.log('Image Link:', imageLink);
     
-          pic.innerHTML = ''; 
+          pic.parentElement.innerHTML = ''; 
     
           const optimizedPic = createOptimizedPicture(imgSrc, imgAlt, imageLink);
     
