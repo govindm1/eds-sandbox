@@ -32,6 +32,7 @@ footer {
             .columns {
               >div {
                 gap: 8px;
+                flex-direction: unset;
 
                 .columns-img-col {
                   flex: 0;
