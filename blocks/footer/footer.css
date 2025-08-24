@@ -22,10 +22,12 @@ footer {
       .footer-main-inner {
         .with-social-icon {
           .columns-wrapper {
-            float: right;
-            margin-top: 24px;
             padding: 0;
-            min-width: 340px;
+            @media screen(min-width: 1280px) {
+              grid-column: 3;
+              grid-row: 2;
+              
+            }
 
             .columns {
               >div {
