@@ -304,15 +304,14 @@ footer {
 
 .ds-nano {
   footer {
-
+    a.button:any-link, button {
+      color: #fff;
+      text-decoration: underline;
+      background: none;
+      font-weight: normal;
+  }
     .footer.block {
 
-      .footer-main-inner,
-      .footer-legal-inner {
-        max-width: 1500px;
-        margin: auto;
-        padding-inline: 30px;
-      }
 
       .footer-main {
         padding: 2rem;
