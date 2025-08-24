@@ -304,14 +304,6 @@ footer {
 
 .ds-nano {
   footer {
-    .footer-link-group {
-      a {
-        color: #fff !important;
-        text-decoration: underline !important;
-        background: none !important;
-        font-weight: normal !important;
-      }
-    }
 
     .footer.block {
 
@@ -419,6 +411,13 @@ footer {
                 margin-bottom: 24px;
                 margin-top: 12px;
                 color: #fff;
+              }
+
+              a {
+                color: #fff !important;
+                text-decoration: underline !important;
+                background: none !important;
+                font-weight: normal !important;
               }
 
               .button-container {
