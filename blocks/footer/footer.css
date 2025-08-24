@@ -23,7 +23,7 @@ footer {
         .with-social-icon {
           .columns-wrapper {
             padding: 0;
-            @media screen(min-width: 1280px) {
+            @media (min-width: 1280px) {
               grid-column: 3;
               grid-row: 2;
               
