@@ -304,12 +304,15 @@ footer {
 
 .ds-nano {
   footer {
-    a.button:any-link, button {
-      color: #fff;
-      text-decoration: underline;
-      background: none;
-      font-weight: normal;
-  }
+    .footer-link-group {
+      a {
+        color: #fff !important;
+        text-decoration: underline !important;
+        background: none !important;
+        font-weight: normal !important;
+      }
+    }
+
     .footer.block {
 
 
@@ -439,7 +442,7 @@ footer {
 
               @media (min-width: 1280px) {
                 column-gap: 2pc;
-                grid-template-columns: repeat(3, minmax(auto, 220px)) 1fr;
+                grid-template-columns: repeat(3, minmax(auto, 390px)) 1fr;
               }
 
               .footer-link-group {
