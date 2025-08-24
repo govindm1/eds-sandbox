@@ -33,7 +33,7 @@ export default async function decorate(block) {
 
           for (let i = 0; i < children.length; i++) {
             const el = children[i];
-            if (el.tagName.toLowerCase() === 'h5') {
+            //if (el.tagName.toLowerCase() === 'h5') {
               const nextEl = children[i + 1];
               if (nextEl && ['ul', 'p', 'a'].includes(nextEl.tagName.toLowerCase())) {
                 const group = document.createElement('div');
@@ -48,7 +48,7 @@ export default async function decorate(block) {
                 group.appendChild(el.cloneNode(true));
                 newGroups.push(group);
               }
-            }
+            //}
           }
 
           contentWrapper.textContent = '';
