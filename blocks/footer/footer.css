@@ -433,13 +433,13 @@ footer {
 
           .section.footer-sections {
             .default-content-wrapper {
-              gap: 3pc;
-              grid-template-columns: repeat(2, 1fr);
+              gap: 2pc;
+              grid-template-columns: repeat(3, 1fr);
               display: grid;
 
               @media (min-width: 1280px) {
-                column-gap: 3pc;
-                grid-template-columns: repeat(2, minmax(auto, 220px)) 1fr;
+                column-gap: 2pc;
+                grid-template-columns: repeat(3, minmax(auto, 220px)) 1fr;
               }
 
               .footer-link-group {
