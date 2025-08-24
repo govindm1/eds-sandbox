@@ -1,26 +1,41 @@
-import { createOptimizedPicture, readBlockConfig } from '../../scripts/aem.js';
+import { createOptimizedPicture } from '../../scripts/aem.js';
+
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
-  // setup image columns
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
+    
       if (pic) {
         const picWrapper = pic.closest('div');
         if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
+          console.log('Inside picwrapper');
+          
           picWrapper.classList.add('columns-img-col');
+          const img = pic.querySelector('img');
+          const imgSrc = img?.src;
+          const imgAlt = img?.alt || '';
+          const imageLink = pic.getAttribute('imagelink');
+    
+          console.log('Image Source:', imgSrc);
+          console.log('Alt Text:', imgAlt);
+          console.log('Image Link:', imageLink);
+    
+          pic.parentElement.innerHTML = ''; 
+    
+          const optimizedPic = createOptimizedPicture(imgSrc, imgAlt, imageLink);
+    
+          if (imageLink) {
+            const link = document.createElement('a');
+            link.href = imageLink;
+            link.appendChild(optimizedPic);
+            col.appendChild(link);
+          } else {
+            col.appendChild(optimizedPic);
+          }
         }
-        const config = readBlockConfig(block);
-        const { fileReference, alt, image_url } = config;
-      
-        console.log('Image config:', config);
-      
-        const picture = createOptimizedPicture(fileReference, alt, image_url);
-        block.innerHTML = '';
-        block.append(picture);
       }
     });
   });
