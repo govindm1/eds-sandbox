@@ -1,8 +1,11 @@
-footer{
-  .footer-wrapper , p{
-      color:inherit;
+footer {
+
+  .footer-wrapper,
+  p {
+    color: inherit !important;
   }
 }
+
 .ds-atlascopcogroup {
   footer {
 
@@ -298,7 +301,8 @@ footer{
     height: auto;
   }
 }
-.ds-nano{
+
+.ds-nano {
   footer {
 
     .footer.block {
@@ -323,7 +327,6 @@ footer{
         .footer-main-inner {
           .with-social-icon {
             .columns-wrapper {
-              padding: 0;
 
               @media (min-width: 1280px) {
                 grid-column: 3;
@@ -406,10 +409,14 @@ footer{
               background-repeat: no-repeat;
               border-radius: 24px 24px 24px 0;
               padding: 0 2pc 24px;
-              row-gap: 24px;
               background-position: 50%;
               display: grid;
               position: relative;
+
+              p {
+                margin-bottom: 24px;
+                margin-top: 12px;
+              }
 
               .button-container {
 
@@ -449,7 +456,6 @@ footer{
 
                 ul {
                   font-size: 18px;
-                  row-gap: 9pt;
                   display: grid;
                   line-height: 1.8;
                   margin-left: 0;
@@ -461,6 +467,7 @@ footer{
                     a {
                       color: #fff;
                       transition: opacity .3s ease-in-out;
+                      text-decoration: none;
 
                       &::after {
                         background-color: currentColor;
@@ -521,7 +528,7 @@ footer{
           }
 
           .footer-copyright {
-            color: #b4cace;
+            color: #fff;
             line-height: 1.8;
             font-size: 18px;
           }
@@ -541,6 +548,7 @@ footer{
                   color: #fff;
                   font-size: 18px;
                   line-height: 1.8;
+                  text-decoration: none;
                 }
               }
             }
@@ -559,6 +567,7 @@ footer{
     max-width: 164px;
     height: auto;
   }
+
   footer .default-content-wrapper picture img {
     height: 70px;
     max-width: 70px;
