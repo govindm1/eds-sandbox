@@ -407,7 +407,7 @@ footer{
               background-size: cover;
               background-repeat: no-repeat;
               border-radius: 24px 24px 24px 0;
-              padding: 3pc 2pc 24px;
+              padding: 44px 2pc 24px;
               row-gap: 24px;
               background-position: 50%;
               display: grid;
@@ -427,10 +427,6 @@ footer{
           }
 
           .section.footer-sections {
-
-            @media (min-width: 1024px) {
-              padding-top: 75pt;
-            }
 
             .default-content-wrapper {
               gap: 3pc;
@@ -567,7 +563,6 @@ footer{
   }
   footer .default-content-wrapper picture img {
     height: 70px;
-    margin-bottom: 24px;
     max-width: 70px;
     width: auto;
     display: flex;
