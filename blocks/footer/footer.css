@@ -1,8 +1,6 @@
 footer{
   .footer-wrapper{
-    p,a{
       color:inherit;
-    }
   }
 }
 .ds-atlascopcogroup {
@@ -427,11 +425,6 @@ footer{
           }
 
           .section.footer-sections {
-
-            @media (min-width: 1024px) {
-              padding-top: 75pt;
-            }
-
             .default-content-wrapper {
               gap: 3pc;
               grid-template-columns: repeat(2, 1fr);
