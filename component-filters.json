@@ -20,6 +20,10 @@
     ]
   },
   {
+    "id": "image",
+    "include": ["fileReference", "alt", "image_url"]
+  },
+  {
     "id": "section",
     "components": [
       "text",
