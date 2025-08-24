@@ -26,6 +26,7 @@ export default async function decorate(block) {
 
       if (c === 'sections') {
         const contentWrapper = section.querySelector('.default-content-wrapper');
+        const columnsWrapper = section.querySelector('.columns-wrapper');
         if (contentWrapper) {
           const children = Array.from(contentWrapper.children);
           const newGroups = [];
@@ -52,6 +53,9 @@ export default async function decorate(block) {
 
           contentWrapper.textContent = '';
           newGroups.forEach((group) => contentWrapper.appendChild(group));
+          if (columnsWrapper && document.body.classList.contains('ds-atlascopcogroup')) {
+            contentWrapper.appendChild(columnsWrapper);
+          }
         }
       }
     }
