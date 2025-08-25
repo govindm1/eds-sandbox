@@ -327,8 +327,16 @@ header nav .nav-sections ul>li>ul>li {
 header nav .nav-tools {
   grid-area: tools;
 }
+.ds-nano header nav {
+  padding: 0 !important;
+}
 .ds-nano header nav a:any-link{
   text-decoration: none;
+  cursor: pointer;
+  font-size: 1pc;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: capitalize;
 }
 .ds-nano header nav{
   font-family: Source Sans Pro,Arial,Helvetica,sans-serif;
@@ -365,6 +373,27 @@ header nav .nav-tools {
   right: 0;
   top: 0
 }
+.ds-nano header .nav-wrapper{
+    clear: both!important;
+    float: none!important;
+    margin-bottom: 0;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    margin-top: 0;
+    width: 100%
+}
+
+@media (min-width: 1280px) {
+    .ds-nano header .nav-wrapper{
+        max-width:80pc
+    }
+}
+
+@media (min-width: 1478px) {
+    .ds-nano header .nav-wrapper{
+        max-width:1478px
+    }
+}
 .ds-nav header nav .nav-sections .default-content-wrapper>ul>li {
   margin: 0 4px;
   font-family: Source Sans Pro,Arial,Helvetica,sans-serif;
@@ -384,3 +413,4 @@ header nav .nav-tools {
   font-family: Source Sans Pro,Arial,Helvetica,sans-serif;
   text-decoration: none;
 }
+
