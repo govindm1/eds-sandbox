@@ -532,6 +532,11 @@ footer {
 
           }
 
+          p,p a{
+            font-size: 16px;
+            
+          }
+
           .footer-copyright {
             color: #fff;
             line-height: 1.8;
@@ -551,8 +556,8 @@ footer {
 
                 a {
                   color: #fff;
-                  font-size: 18px;
-                  line-height: 1.8;
+                  font-size: 16px;
+                  line-height: 1.6;
                   text-decoration: none;
                 }
               }
