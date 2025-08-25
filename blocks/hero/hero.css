@@ -82,6 +82,14 @@ main .hero-container {
   max-width: 612px;
   word-break: break-word;
 }
+.ds-nano .hero {
+  padding: 200px 20px 236px;
+  min-height: 50pc;
+  box-sizing: border-box;
+}
+.hero >div:nth-child(2) >div {
+  padding-inline: 0;
+}
 .ds-nano .hero ::before{
   background: linear-gradient(110.49deg, rgba(0, 36, 68, .69) 13.9%, rgba(5, 74, 117, 0) 90.75%);
   background-blend-mode: multiply;
