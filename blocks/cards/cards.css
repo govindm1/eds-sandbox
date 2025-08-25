@@ -654,8 +654,11 @@ main .section.ds-brand-bg-dark .cards-card-body :is(h1, h2, h3, h4, h5, h6){
   padding-top: 0px;
   max-width: 100%;
   margin: auto;
+  height: 166px;
 }
- 
+.ds-nano .news-card .cards .cards-card-image img {
+  height: 100%;
+}
 .ds-nano .news-card .cards-card-body .button-container{
   padding: 24px 0 0 0;
   margin-bottom: 0;
