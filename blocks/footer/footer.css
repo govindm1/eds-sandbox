@@ -199,6 +199,9 @@ footer {
                   margin: 0;
 
                   li {
+                    font-size: 20px;
+                    font-weight: 400;
+                    font-family: Source Sans Pro,Arial,Helvetica,sans-serif;
                     a {
                       color: #fff;
                       transition: opacity .3s ease-in-out;
@@ -444,14 +447,15 @@ footer {
 
               .footer-link-group {
 
-                h5 {
+                h4 {
                   margin-top: 0px;
                   margin-bottom: 24px;
-                  font-size: 20px;
-                  color: #b4cace;
-                  font-weight: 600;
+                  font-size: 28px;
+                  color: #fff;
+                  font-weight: 700;
                   line-height: 1.4;
                   margin-bottom: 24px;
+                  font-family: Poppins,Arial,Helvetica,sans-serif;
                 }
 
                 ul {
@@ -504,6 +508,7 @@ footer {
         padding-top: 12px;
         padding-inline: 30px;
         background-color: rgb(0, 53, 101);
+        border-top: 1px solid #446786;
 
         @media (min-width: 1024px) {
           padding-bottom: 20px;
