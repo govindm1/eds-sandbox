@@ -330,22 +330,20 @@ footer {
 
               .columns {
                 >div {
-                  gap: 8px;
+                  gap: 24px;
                   flex-direction: unset;
 
                   .columns-img-col {
                     flex: 0;
 
                     picture {
-                      height: 3pc;
-                      width: 3pc;
+                      height: 34px;
+                      width: 34px;
                       -webkit-box-align: center;
                       -ms-flex-align: center;
                       -webkit-box-pack: center;
                       -ms-flex-pack: center;
                       align-items: center;
-                      border: 1px solid #fff;
-                      border-radius: 50%;
                       display: -webkit-box;
                       display: -ms-flexbox;
                       display: flex;
@@ -357,8 +355,8 @@ footer {
                       cursor: pointer;
 
                       img {
-                        height: 24px;
-                        width: 24px;
+                        height: 34px;
+                        width: 34px;
                       }
                     }
                   }
