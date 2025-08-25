@@ -312,7 +312,6 @@ footer {
 
 
       .footer-main {
-        padding: 2rem;
         background-color: rgb(0, 53, 101);
         background-image: none;
         font-size: var(--body-font-size-s);
@@ -382,7 +381,7 @@ footer {
 
           @media (min-width: 1280px) {
             column-gap: 34px;
-            grid-template-columns: minmax(auto, 32%) minmax(auto, 63%);
+            grid-template-columns: minmax(auto, 45%) minmax(auto, 55%);
           }
 
           .section.footer-brand {
@@ -512,7 +511,6 @@ footer {
       .footer-legal {
         padding-bottom: 12px;
         padding-top: 12px;
-        padding-inline: 30px;
         background-color: rgb(0, 53, 101);
         position: relative;
 
@@ -571,12 +569,6 @@ footer {
           position: absolute;
           right: 22pt;
           top: 0;
-        }
-        @media (min-width: 1024px){
-          &::before {
-            left: 45pt;
-            right: 45pt;
-          }
         }
       }
     }
