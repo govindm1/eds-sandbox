@@ -360,6 +360,7 @@ a.button.secondary:hover{
     padding: 0px 20px;
     max-width: 1450px;
     height: auto;
+    box-sizing: border-box;
 }
 .ds-nano .teaser.block a.button:any-link, button{
     color: #003565 !important;
